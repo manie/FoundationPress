@@ -12,11 +12,14 @@
 
 		</section>
 		<div id="footer-container">
-			<footer id="footer">
-				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<?php dynamic_sidebar( 'footer-widgets' ); ?>
-				<?php do_action( 'foundationpress_after_footer' ); ?>
-			</footer>
+			<?php if( is_sidebar_active( 'footer-widgets' ) ): ?>
+				<footer id="footer">
+					<?php do_action( 'foundationpress_before_footer' ); ?>
+					<?php dynamic_sidebar( 'footer-widgets' ); ?>
+					<?php do_action( 'foundationpress_after_footer' ); ?>
+				</footer>
+			<?php endif; ?>
+			<div class="copyright"> &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> </div>
 		</div>
 
 		<?php do_action( 'foundationpress_layout_end' ); ?>

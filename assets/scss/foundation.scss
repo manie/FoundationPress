@@ -75,6 +75,7 @@
 */
 
 // Modules
+@import "modules/header";
 @import "modules/navigation";
 @import "modules/footer";
 @import "modules/sidebar";
@@ -83,13 +84,14 @@
 // Components
 @import "components/buttons";
 @import "components/cards";
+@import "components/images";
 @import "components/featured-image";
 @import "components/dividers";
 @import "components/links";
 
 // Templates
 @import "templates/front";
-@import "templates/kitchen-sink";
+// @import "templates/kitchen-sink";
 @import "templates/page-default";
 @import "templates/page-sidebar-left";
 @import "templates/page-full-width";
