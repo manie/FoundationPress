@@ -9,6 +9,7 @@
 
 //  Settings
 @import "global/settings"; // Foundation settings file.
+@import "custom/DANDO_settings"; // Dando settings file.
 
 // Foundation mixins & browser resets
 @import '../components/foundation-sites/scss/foundation';
@@ -91,8 +92,11 @@
 
 // Templates
 @import "templates/front";
-// @import "templates/kitchen-sink";
+@import "templates/kitchen-sink";
 @import "templates/page-default";
 @import "templates/page-sidebar-left";
 @import "templates/page-full-width";
 @import "templates/single-post";
+
+// Custom Modules
+@import "custom/fullscreen-image-slider";

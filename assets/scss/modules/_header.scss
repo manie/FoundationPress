@@ -1,13 +1,13 @@
 .site-header {
-  background-color: $outer-space;
-  max-width: 100%;
-  width: 100%;
-  margin: 0 auto;
-  padding: rem-calc(30) 0;
+	background-color: $outer-space;
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
 
-  .title-bar {}
+	.title-bar {}
 
-  .top-bar {
-    @include grid-row();
-  }
+	.top-bar {
+		@include grid-row();
+	}
 }

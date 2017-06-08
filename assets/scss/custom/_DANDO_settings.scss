@@ -1,0 +1,36 @@
+//  Foundation for Sites Settings
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//   1. Colour Scheme
+//   2. Layout Sizes
+
+
+// 1. Colour Scheme
+// ---------
+
+$primary-color: (
+	light: #5a5c5f,
+	regular: #3c3d3e,
+	dark: #292b2f,
+);
+
+$secondary-color: (
+	light: #f8d8b2,
+	regular: #f6c78f,
+	dark: #ebab6d,
+);
+
+$tertiary-color: (
+	light: #fefefe,
+	regular: #f6f2e3,
+	dark: #ebe1cd,
+);
+
+
+// 2. Layout Sizes
+// ---------
+
+$header-height: 45px;
+$content-max-width: 900px;

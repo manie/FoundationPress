@@ -1,0 +1,57 @@
+.fullscreen-image-slider {
+
+	.orbit-slide {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 100vh;
+		height: calc(100vh - #{$header-height});
+		position: relative;
+		z-index: 0;
+	}
+
+	.orbit-image {
+		display: none;
+		height: 100vh;
+		height: calc(100vh - #{$header-height});
+		position: relative;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.orbit-overlay {
+		height: 100vh;
+		height: calc(100vh - #{$header-height});
+		position: relative;
+		z-index: 2;
+
+		&.dark { background-color: rgba($black,0.3); }
+		&.light { background-color: rgba($white,0.3); }
+	}
+
+	.orbit-caption {
+		background: none;
+		bottom: 50%;
+		color: $white;
+		font-weight: bold;
+		margin: 0 auto;
+		text-align: center;
+		transform: translateY(50%);
+		z-index: 3;
+
+		h1 {
+			line-height: 1;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: $content-max-width;
+		}
+
+		h1 + .button {
+			margin-top: 1em;
+		}
+	}
+}
