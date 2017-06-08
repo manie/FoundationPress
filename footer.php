@@ -12,7 +12,7 @@
 
 		</section>
 		<div id="footer-container">
-			<?php if( is_sidebar_active( 'footer-widgets' ) ): ?>
+			<?php if( function_exists('is_sidebar_active') && is_sidebar_active( 'footer-widgets' ) ): ?>
 				<footer id="footer">
 					<?php do_action( 'foundationpress_before_footer' ); ?>
 					<?php dynamic_sidebar( 'footer-widgets' ); ?>

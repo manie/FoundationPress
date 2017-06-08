@@ -8,8 +8,10 @@
  */
 
 register_nav_menus(array(
-	'top-bar-r'  => 'Right Top Bar',
-	'mobile-nav' => 'Mobile',
+	'top-bar-r' 	=> 'Right Top Bar',
+	'mobile-nav' 	=> 'Mobile',
+	'main-menu' 	=> 'Main Menu',
+	'footer-menu' 	=> 'Footer Menu',
 ));
 
 

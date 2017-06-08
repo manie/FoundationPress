@@ -49,6 +49,8 @@
 				<?php endif; ?>
 			</div>
 		</nav>
+
+		<?php get_template_part( 'template-parts/custom/fullscreen-image-slider' ); ?>
 	</header>
 
 	<section class="container">

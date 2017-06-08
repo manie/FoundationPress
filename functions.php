@@ -52,4 +52,9 @@ require_once( 'library/responsive-images.php' );
 
 /*** CUSTOM ADDITIONS */
 require_once( 'library/custom-overrides.php' );
-require_once( 'library/custom-functions.php' );
+// require_once( 'library/custom-functions.php' );
+// require_once( 'library/custom-require-plugins.php' );
+// require_once( 'library/custom-theme-content.php' );
+
+/** CUSTOM POST TYPES */
+require_once( 'library/types/CUSTOM_TYPE_sliders.php' );
