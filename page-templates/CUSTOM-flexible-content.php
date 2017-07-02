@@ -10,8 +10,6 @@ get_header(); ?>
 
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
-	<?php // get_template_part( 'template-parts/custom/module-primary-content' ); ?>
-
 	<?php
 
 		// check if the flexible content field has rows of data

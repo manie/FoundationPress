@@ -1,8 +1,11 @@
 <?php
 
+  // Custom Query vars
+  $post_type[] = 'sliders';
+
   // WP_Query arguments
   $args = array(
-    'post_type'              => array( 'sliders' ),
+    'post_type'              => $post_type,
     'post_status'            => array( 'publish' ),
     'nopaging'               => true,
   );
@@ -12,8 +15,7 @@
   $count = $query->post_count;
 
   // Extra class for first active item
-  $i = 0;
-  if ( $i == 1 ) { $active = 'is-active'; }
+  $i = 0; if ( $i == 1 ) { $active = 'is-active'; }
 
 ?>
 

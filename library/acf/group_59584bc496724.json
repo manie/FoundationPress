@@ -3,6 +3,60 @@
     "title": "Module - Post Listing",
     "fields": [
         {
+            "key": "field_5958d7ab9587d",
+            "label": "Module",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5958d76f9587c",
+            "label": "Module Title",
+            "name": "dcf_module_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5958d7e89587e",
+            "label": "Module Introduction",
+            "name": "dcf_module_introduction",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_59584bc49c240",
             "label": "Content",
             "name": "",
@@ -19,10 +73,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_59584bc49c2c6",
-            "label": "Post Listing Type",
-            "name": "post_listing_type",
-            "type": "text",
+            "key": "field_5958d262a0adb",
+            "label": "Post Listing Selection",
+            "name": "dcf_post_listing_selection",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -31,11 +85,96 @@
                 "class": "",
                 "id": ""
             },
+            "choices": {
+                "recent": "Most recent posts",
+                "custom": "Custom post selection"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "recent",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_59584bc49c2c6",
+            "label": "Post Listing Type",
+            "name": "dcf_post_listing_type",
+            "type": "post_type_selector",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5958d262a0adb",
+                        "operator": "==",
+                        "value": "recent"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "select_type": 0
+        },
+        {
+            "key": "field_5958d90e3b30d",
+            "label": "Post Listing Count",
+            "name": "dcf_post_listing_count",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5958d262a0adb",
+                        "operator": "==",
+                        "value": "recent"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
+            "prepend": "#",
             "append": "",
-            "maxlength": ""
+            "min": 1,
+            "max": 99,
+            "step": 1
+        },
+        {
+            "key": "field_5958d82f9587f",
+            "label": "Post Listing Items",
+            "name": "dcf_post_listing_items",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5958d262a0adb",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
         },
         {
             "key": "field_59584bc49d97c",
@@ -115,7 +254,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
@@ -151,5 +290,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1498971588
+    "modified": 1499002396
 }
