@@ -1,8 +1,8 @@
 <?php
 /**
- * THEME: content
+ * Custom Theme Content
  *
- * @version: 1.2
+ * @package foundationWP
  */
 
 // Programmatically create some basic pages, and then set Home and Blog

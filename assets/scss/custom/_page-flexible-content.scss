@@ -1,0 +1,17 @@
+#page-flexible-content {
+
+	.flexible-content {
+		margin-top: 3rem;
+
+		&.grid {
+			@include grid-row();
+		}
+
+		&.full {}
+	}
+
+	.main-content {
+		margin-top: 3rem;
+		@include grid-row();
+	}
+}

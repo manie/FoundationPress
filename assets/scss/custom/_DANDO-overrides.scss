@@ -1,0 +1,25 @@
+/*
+ * CUSTOM Global/Foundation overrides
+ */
+
+// Typography
+p:empty { margin-bottom: 0; }
+.entry-content {
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+// Global
+section.container {
+
+	@include breakpoint(small) {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	@include breakpoint(medium) {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+}

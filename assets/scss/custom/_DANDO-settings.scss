@@ -1,0 +1,51 @@
+//  Foundation for Sites Settings
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//   1. Colour Scheme
+//   2. Layout Sizes
+
+
+// 1. Colour Scheme
+// ---------
+
+// OVERRIDE DEFAULT COLOURS
+$foundation-palette: (
+	primary: #001f3f,
+	secondary: #0074D9,
+	tertiary: #7FDBFF,
+	success: #2ECC40,
+	warning: #FF851B,
+	alert: #FF4136,
+);
+
+// Additional default colour
+// EXISTING: $primary-color: map-get($foundation-palette, primary) !global;
+// EXISTING: $secondary-color: map-get($foundation-palette, secondary) !global;
+$tertiary-color: map-get($foundation-palette, tertiary) !global;
+
+$primary-color-set: (
+	regular: $primary-color,
+	light: lighten( $primary-color, 10% ),
+	dark: darken( $primary-color, 10% ),
+);
+
+$secondary-color-set: (
+	regular: $secondary-color,
+	light: lighten( $secondary-color, 10% ),
+	dark: darken( $secondary-color, 10% ),
+);
+
+$tertiary-color-set: (
+	regular: $tertiary-color,
+	light: lighten( $tertiary-color, 10% ),
+	dark: darken( $tertiary-color, 10% ),
+);
+
+
+// 2. Layout Sizes
+// ---------
+
+$header-height: 45px;
+$content-max-width: 900px;

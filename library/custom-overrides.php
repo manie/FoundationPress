@@ -172,9 +172,11 @@
 	}
 
 // ACF PRO - Register & define a Google Maps API key to allow the location field to work correctly.
-	if (get_field('dcf_google_maps_api_key', 'option')) {
-		$google_maps_api_key = get_field('dcf_google_maps_api_key', 'option');
-	} else { $google_maps_api_key = null; }
+	if( function_exists('get_field') ) {
+		if (get_field('dcf_google_maps_api_key', 'option')) {
+			$google_maps_api_key = get_field('dcf_google_maps_api_key', 'option');
+		} else { $google_maps_api_key = null; }
+	}
 
 	if ( isset($google_maps_api_key) ) {
 

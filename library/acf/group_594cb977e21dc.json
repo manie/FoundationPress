@@ -1,0 +1,203 @@
+{
+    "key": "group_594cb977e21dc",
+    "title": "TEMPLATE - Flexible Content",
+    "fields": [
+        {
+            "key": "field_594cba959276f",
+            "label": "Content Modules",
+            "name": "dcm",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hide-label",
+                "id": ""
+            },
+            "layouts": {
+                "5955b9972d25c": {
+                    "key": "5955b9972d25c",
+                    "name": "primary_content",
+                    "label": "Primary Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5955b9a62d25d",
+                            "label": "DCM Primary Content",
+                            "name": "dcm_primary_content",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5955b8d6d2a50"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "1",
+                    "max": "1"
+                },
+                "5955b9e42d25e": {
+                    "key": "5955b9e42d25e",
+                    "name": "horizontal_break",
+                    "label": "Horizontal Break",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5955b9e42d25f",
+                            "label": "DCM Horizontal Break",
+                            "name": "dcm_horizontal_break",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5955b96585d6a"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "594cba9ba61ef": {
+                    "key": "594cba9ba61ef",
+                    "name": "grid_slider",
+                    "label": "Grid Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_594cbad892770",
+                            "label": "DCM Grid Slider",
+                            "name": "dcm_grid_slider",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_594ca8c462379"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5955e495792c9": {
+                    "key": "5955e495792c9",
+                    "name": "extra_content",
+                    "label": "Extra Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5955e495792ca",
+                            "label": "DCM Extra Content",
+                            "name": "dcm_extra_content",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5955e3e8ccb84"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "59583dd099a4a": {
+                    "key": "59583dd099a4a",
+                    "name": "post_listing",
+                    "label": "Post Listing",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_59583dd099a4b",
+                            "label": "DCM Post Listing",
+                            "name": "dcm_post_listing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_59584bc496724"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Module",
+            "min": "",
+            "max": 99
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "current_user_role",
+                "operator": "==",
+                "value": "administrator"
+            },
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-templates\/CUSTOM-flexible-content.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "- Dando Content Modules",
+    "modified": 1498971223
+}

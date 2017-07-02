@@ -82,7 +82,7 @@ function DANDO_register_required_plugins() {
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '5.5.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
@@ -141,6 +141,16 @@ function DANDO_register_required_plugins() {
 		// 	'source'    => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip',
 		// ),
 
+		array(
+			'name' 					=> 'Advanced Custom Fields: Post Type Selector',
+			'slug' 					=> 'acf-post-type-selector',
+			'source' 				=> 'https://github.com/TimPerry/acf-post-type-selector/archive/master.zip',
+			'required' 				=> true,
+			'force_activation'		=> false,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
+		),
+
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		// array(
 		// 	'name'      => 'BuddyPress',
@@ -152,25 +162,31 @@ function DANDO_register_required_plugins() {
 			'name' 				=> 'Advanced Access Manager',
 			'slug' 				=> 'advanced-access-manager',
 			'required' 			=> false,
-			'force_activation'	=> false
+			'force_activation'	=> false,
 		),
 		array(
-			'name' 				=> 'Advanced Custom Fields: Image Crop Add-on',
-			'slug' 				=> 'acf-image-crop-add-on',
-			'required' 			=> true,
-			'force_activation'	=> false
+			'name' 					=> 'Advanced Custom Fields: Image Crop Add-on',
+			'slug' 					=> 'acf-image-crop-add-on',
+			'required' 				=> true,
+			'force_activation'		=> false,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
 		),
 		array(
-			'name' 				=> 'Advanced Custom Fields: Limiter',
-			'slug' 				=> 'advanced-custom-fields-limiter-field',
-			'required' 			=> true,
-			'force_activation'	=> false
+			'name' 					=> 'Advanced Custom Fields: Limiter',
+			'slug' 					=> 'advanced-custom-fields-limiter-field',
+			'required' 				=> true,
+			'force_activation'		=> false,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
 		),
 		array(
-			'name' 				=> 'Advanced Custom Fields: Gravityforms Add-on',
-			'slug' 				=> 'acf-gravityforms-add-on',
-			'required' 			=> true,
-			'force_activation'	=> false
+			'name' 					=> 'Advanced Custom Fields: Gravityforms Add-on',
+			'slug' 					=> 'acf-gravityforms-add-on',
+			'required' 				=> true,
+			'force_activation'		=> false,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
 		),
 		array(
 			'name' 				=> 'Akismet',

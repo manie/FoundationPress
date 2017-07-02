@@ -1,0 +1,54 @@
+{
+    "key": "group_595838be6e1e8",
+    "title": "HELP - Flexible Content Page",
+    "fields": [
+        {
+            "key": "field_595838ea0476b",
+            "label": "Flexible Content",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hide-label",
+                "id": ""
+            },
+            "message": "<h3>Flexible Content<\/h3>\r\n<p>Use the Add Module button to add flexible content modules to the page, use drag & drop to change horizontal layout. Use the Featured Image section to change header images when in use by theme.<\/p>\r\n<em>Publish\/Update your page to save changes.<\/em>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "current_user_role",
+                "operator": "==",
+                "value": "administrator"
+            },
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/CUSTOM-flexible-content.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "custom_fields",
+        "discussion",
+        "comments",
+        "slug",
+        "author",
+        "format",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "- TEMPLATE - Flexible Content",
+    "modified": 1498963290
+}

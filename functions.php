@@ -38,9 +38,6 @@ require_once( 'library/enqueue-scripts.php' );
 /** Add theme support */
 require_once( 'library/theme-support.php' );
 
-/** Add Nav Options to Customer */
-require_once( 'library/custom-nav.php' );
-
 /** Change WP's sticky post class */
 require_once( 'library/sticky-posts.php' );
 
@@ -51,10 +48,11 @@ require_once( 'library/responsive-images.php' );
 // require_once( 'library/protocol-relative-theme-assets.php' );
 
 /*** CUSTOM ADDITIONS */
-require_once( 'library/custom-overrides.php' );
-require_once( 'library/custom-functions.php' );
-require_once( 'library/custom-require-plugins.php' );
-require_once( 'library/custom-theme-content.php' );
+require_once( 'library/CUSTOM-overrides.php' );
+require_once( 'library/CUSTOM-functions.php' );
+require_once( 'library/CUSTOM-require-plugins.php' );
+require_once( 'library/CUSTOM-menus.php' );
+require_once( 'library/CUSTOM-theme-content.php' );
 
 /** CUSTOM POST TYPES */
 require_once( 'library/types/CUSTOM_TYPE_sliders.php' );

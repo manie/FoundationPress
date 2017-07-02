@@ -1,0 +1,41 @@
+{
+    "key": "group_5955b8d6d2a50",
+    "title": "Positioner - Primary Content",
+    "fields": [
+        {
+            "key": "field_5955b8ecf50bf",
+            "label": "Primary Content",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hide-label",
+                "id": ""
+            },
+            "message": "<strong>Use the main editor at the top of the page to add your content.<\/strong>\r\n<em>This is just a placeholder module to aid in horizontal layout positioning.<\/em>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "current_user",
+                "operator": "==",
+                "value": "viewing_back"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "- DCM <b>- keep disabled<\/b>",
+    "modified": 1498971192
+}

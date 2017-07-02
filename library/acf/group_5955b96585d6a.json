@@ -1,0 +1,41 @@
+{
+    "key": "group_5955b96585d6a",
+    "title": "Positioner - Horizontal Break",
+    "fields": [
+        {
+            "key": "field_5955b96589458",
+            "label": "Horizontal Break",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hide-label",
+                "id": ""
+            },
+            "message": "<em>This is just a placeholder module to aid in horizontal layout positioning.<\/em>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "current_user",
+                "operator": "==",
+                "value": "viewing_back"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "- DCM <b>- keep disabled<\/b>",
+    "modified": 1498971187
+}
