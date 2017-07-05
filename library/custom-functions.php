@@ -15,10 +15,16 @@
 	}
 
 // Update CSS within in Admin
-	function admin_style() {
-		wp_enqueue_style('admin-styles', get_template_directory_uri().'/assets/stylesheets/admin.css');
+	function dando_admin_style() {
+		wp_enqueue_style('admin-styles', get_template_directory_uri().'/assets/stylesheets/wp-admin.css');
 	}
-	add_action('admin_enqueue_scripts', 'admin_style');
+	add_action('admin_enqueue_scripts', 'dando_admin_style');
+
+// Update Login CSS
+	function dando_login_style() {
+		wp_enqueue_style('admin-styles', get_template_directory_uri().'/assets/stylesheets/wp-login.css');
+	}
+	add_action('login_head', 'dando_login_style');
 
 // ACF Hide post types in Post Object field
 	function dando_post_object_query( $args, $field, $post_id ) {
@@ -29,6 +35,7 @@
 		// Remove Media posts
 		if (in_array('attachment', $post_types)) {
 		    unset($post_types[array_search('attachment',$post_types)]);
+		    unset($post_types[array_search('sliders',$post_types)]);
 		}
 
 		$args['post_type'] = $post_types;
@@ -40,3 +47,10 @@
 
 	// filter for every field
 	add_filter('acf/fields/post_object/query', 'dando_post_object_query', 10, 3);
+
+// Remove h1 from the WordPress editor.
+	function dando_remove_h1_from_editor( $init ) {
+		$init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;Preformatted=pre;';
+		return $init;
+	}
+	add_filter( 'tiny_mce_before_init', 'dando_remove_h1_from_editor' );

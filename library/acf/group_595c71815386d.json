@@ -1,9 +1,9 @@
 {
-    "key": "group_5955e3e8ccb84",
-    "title": "Module - Extra Content",
+    "key": "group_595c71815386d",
+    "title": "Module - Contect Form",
     "fields": [
         {
-            "key": "field_59598e9f7635e",
+            "key": "field_595c7181578f8",
             "label": "Module",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598ec193795",
+            "key": "field_595c71815790b",
             "label": "DCM Tab - Module",
             "name": "dcm_tab_module",
             "type": "clone",
@@ -40,7 +40,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_5955e3e8d0566",
+            "key": "field_595c71815791a",
             "label": "Content",
             "name": "",
             "type": "tab",
@@ -56,26 +56,70 @@
             "endpoint": 0
         },
         {
-            "key": "field_5955e3e8d0575",
-            "label": "Extra Content",
-            "name": "dcf_extra_content_editor",
-            "type": "wysiwyg",
+            "key": "field_595c718157928",
+            "label": "Gravity Form Selection",
+            "name": "dcf_gravity_form_selection",
+            "type": "forms",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "hide-label",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "post_object",
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_595c795a4582d",
+            "label": "Gravity Form Options",
+            "name": "dcf_gravity_form_options",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "title": "Include form title",
+                "description": "Include form description",
+                "ajax": "Use AJAX to submit the form"
+            },
+            "allow_custom": 0,
+            "save_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_595c798d4582e",
+            "label": "Gravity Form Tabs",
+            "name": "dcf_gravity_form_tabindex",
+            "type": "number",
+            "instructions": "Specify the starting tab index for the fields of this form.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
+            "placeholder": "",
+            "prepend": "#",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         },
         {
-            "key": "field_5955e3e8d0580",
+            "key": "field_595c718157936",
             "label": "Options",
             "name": "",
             "type": "tab",
@@ -91,7 +135,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598ec793796",
+            "key": "field_595c718157944",
             "label": "DCM Tab - Options",
             "name": "dcm_tab_options",
             "type": "clone",
@@ -112,7 +156,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_59598eaa7635f",
+            "key": "field_595c718157952",
             "label": "Design",
             "name": "",
             "type": "tab",
@@ -128,7 +172,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598eca93797",
+            "key": "field_595c718157960",
             "label": "DCM Tab - Design",
             "name": "dcm_tab_design",
             "type": "clone",
@@ -166,5 +210,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499129427
+    "modified": 1499232856
 }

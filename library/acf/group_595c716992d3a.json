@@ -1,9 +1,9 @@
 {
-    "key": "group_5955e3e8ccb84",
-    "title": "Module - Extra Content",
+    "key": "group_595c716992d3a",
+    "title": "Module - Widget Area",
     "fields": [
         {
-            "key": "field_59598e9f7635e",
+            "key": "field_595c7169974c4",
             "label": "Module",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598ec193795",
+            "key": "field_595c7169974f3",
             "label": "DCM Tab - Module",
             "name": "dcm_tab_module",
             "type": "clone",
@@ -40,7 +40,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_5955e3e8d0566",
+            "key": "field_595c716997519",
             "label": "Content",
             "name": "",
             "type": "tab",
@@ -56,7 +56,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5955e3e8d0575",
+            "key": "field_595c71699753b",
             "label": "Extra Content",
             "name": "dcf_extra_content_editor",
             "type": "wysiwyg",
@@ -75,7 +75,7 @@
             "delay": 0
         },
         {
-            "key": "field_5955e3e8d0580",
+            "key": "field_595c716997549",
             "label": "Options",
             "name": "",
             "type": "tab",
@@ -91,7 +91,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598ec793796",
+            "key": "field_595c71699755b",
             "label": "DCM Tab - Options",
             "name": "dcm_tab_options",
             "type": "clone",
@@ -112,7 +112,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_59598eaa7635f",
+            "key": "field_595c716997567",
             "label": "Design",
             "name": "",
             "type": "tab",
@@ -128,7 +128,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598eca93797",
+            "key": "field_595c716997578",
             "label": "DCM Tab - Design",
             "name": "dcm_tab_design",
             "type": "clone",
@@ -166,5 +166,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499129427
+    "modified": 1499230581
 }

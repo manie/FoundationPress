@@ -55,11 +55,22 @@
 	if ( get_sub_field('dcf_module_title') ) { $module_title = get_sub_field('dcf_module_title'); }
 	if ( get_sub_field('dcf_module_introduction') ) { $module_introduction = get_sub_field('dcf_module_introduction'); }
 
+	// Module Design - CSS colour & background
+	if ( get_sub_field('dcf_module_design_bg_colour') ) { $module_bg_colour = get_sub_field('dcf_module_design_bg_colour'); }
+	if ( get_sub_field('dcf_module_design_bg_image') ) { $module_bg_image = get_sub_field('dcf_module_design_bg_image'); }
+	if ( isset($module_bg_colour) ) { $module_design_style = 'style="background-color:' . $module_bg_colour . '"'; }
+	if ( isset($module_bg_image) ) {
+		$image_url = $module_bg_image['url'];
+		$image_size = 'large';
+		$image_with_size = $module_bg_image['sizes'][ $image_size ];
+		$module_design_style = 'style="background-image: url(' . $image_with_size . ')"';
+	}
+
 ?>
 
 <?php if ( $query->have_posts() ) { ?>
 
-	<div class="<?php echo $post_class_string; ?>" data-module="<?php echo $module_name; ?>">
+	<div class="<?php echo $post_class_string; ?>" data-module="<?php echo $module_name; ?>" <?php if ( isset($module_design_style) ) { echo $module_design_style; } ?>>
 
 		<?php if ( isset($module_title) || isset($module_introduction) ) { ?>
 			<header class="panel-header">
@@ -75,7 +86,7 @@
 		<div class="panel-content">
 			<section class="<?php echo $active; ?>">
 				<?php while ( $query->have_posts() ) { $query->the_post(); ?>
-					<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+					<?php get_template_part( 'template-parts/content', 'custom'); ?>
 				<?php } ?>
 			</section>
 		</div>

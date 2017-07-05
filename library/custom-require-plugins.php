@@ -194,12 +194,12 @@ function DANDO_register_required_plugins() {
 			'required' 			=> false,
 			'force_activation'	=> false
 		),
-		array(
-			'name' 				=> 'Apocalypse Meow',
-			'slug' 				=> 'apocalypse-meow',
-			'required' 			=> true,
-			'force_activation'	=> true
-		),
+		// array(
+		// 	'name' 				=> 'Apocalypse Meow',
+		// 	'slug' 				=> 'apocalypse-meow',
+		// 	'required' 			=> true,
+		// 	'force_activation'	=> true
+		// ),
 		array(
 			'name' 				=> 'Attachment Pages Redirect',
 			'slug' 				=> 'attachment-pages-redirect',
@@ -260,12 +260,12 @@ function DANDO_register_required_plugins() {
 			'required' 			=> true,
 			'force_activation'	=> false
 		),
-		array(
-			'name' 				=> 'Media File Renamer',
-			'slug' 				=> 'media-file-renamer',
-			'required' 			=> false,
-			'force_activation'	=> false
-		),
+		// array(
+		// 	'name' 				=> 'Media File Renamer',
+		// 	'slug' 				=> 'media-file-renamer',
+		// 	'required' 			=> false,
+		// 	'force_activation'	=> false
+		// ),
 		array(
 			'name' 				=> 'Quick Featured Images',
 			'slug' 				=> 'quick-featured-images',
@@ -314,12 +314,12 @@ function DANDO_register_required_plugins() {
 			'required' 			=> true,
 			'force_activation'	=> false
 		),
-		array(
-			'name' 				=> 'Transient Cleaner',
-			'slug' 				=> 'artiss-transient-cleaner',
-			'required' 			=> false,
-			'force_activation'	=> false
-		),
+		// array(
+		// 	'name' 				=> 'Transient Cleaner',
+		// 	'slug' 				=> 'artiss-transient-cleaner',
+		// 	'required' 			=> false,
+		// 	'force_activation'	=> false
+		// ),
 		array(
 			'name' 				=> 'Video Thumbnails',
 			'slug' 				=> 'video-thumbnails',
@@ -335,8 +335,8 @@ function DANDO_register_required_plugins() {
 		array(
 			'name' 				=> 'WordPress Importer',
 			'slug' 				=> 'wordpress-importer',
-			'required' 			=> true,
-			'force_activation'	=> true
+			'required' 			=> false,
+			'force_activation'	=> false
 		),
 		array(
 			'name' 				=> 'WP Inline Comment Errors',
@@ -348,6 +348,12 @@ function DANDO_register_required_plugins() {
 			'name' 				=> 'WP-Optimize',
 			'slug' 				=> 'wp-optimize',
 			'required' 			=> false,
+			'force_activation'	=> false
+		),
+		array(
+			'name' 				=> 'Wordfence',
+			'slug' 				=> 'wordfence',
+			'required' 			=> true,
 			'force_activation'	=> false
 		),
 		array(

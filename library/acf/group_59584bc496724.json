@@ -19,10 +19,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_5958d76f9587c",
-            "label": "Module Title",
-            "name": "dcf_module_title",
-            "type": "text",
+            "key": "field_59598c5414ae9",
+            "label": "DCM Tab - Module",
+            "name": "dcm_tab_module",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -31,30 +31,13 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5958d7e89587e",
-            "label": "Module Introduction",
-            "name": "dcf_module_introduction",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "visual",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
+            "clone": [
+                "group_59598b54089ce"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_59584bc49c240",
@@ -193,10 +176,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_59584bc49da97",
-            "label": "Grid Options",
-            "name": "dcf_module_opt_grid",
-            "type": "radio",
+            "key": "field_59598d3d03e8e",
+            "label": "DCM Tab - Options",
+            "name": "dcm_tab_options",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -205,41 +188,13 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "grid": "Within grid",
-                "full": "Full width"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "grid",
-            "layout": "horizontal",
-            "return_format": "value"
-        },
-        {
-            "key": "field_59584bc49dae2",
-            "label": "Column Display",
-            "name": "dcf_module_opt_columns",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "one": "One Column",
-                "two": "Two Columns",
-                "three": "Three Columns"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "one",
-            "layout": "horizontal",
-            "return_format": "value"
+            "clone": [
+                "group_59598d06c3fe1"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_59587d0e1260c",
@@ -258,10 +213,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_59587d1f1260d",
-            "label": "Background colour",
-            "name": "dcf_module_style_bg_colour",
-            "type": "color_picker",
+            "key": "field_59598da011d81",
+            "label": "DCM Tab - Design",
+            "name": "dcm_tab_design",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -270,7 +225,13 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": ""
+            "clone": [
+                "group_59598d65ba0c5"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -290,5 +251,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499002396
+    "modified": 1499128187
 }

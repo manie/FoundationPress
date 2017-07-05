@@ -1,0 +1,63 @@
+{
+    "key": "group_59598d65ba0c5",
+    "title": "DCM Tab - Design",
+    "fields": [
+        {
+            "key": "field_59587d1f1260d",
+            "label": "Background colour",
+            "name": "dcf_module_design_bg_colour",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_59598dc04f935",
+            "label": "Background image",
+            "name": "dcf_module_design_bg_image",
+            "type": "image_crop",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "hard",
+            "target_size": "featured-medium",
+            "width": "",
+            "height": "",
+            "preview_size": "featured-small",
+            "force_crop": "no",
+            "save_in_media_library": "no",
+            "retina_mode": "yes",
+            "save_format": "object",
+            "library": "all"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "current_user",
+                "operator": "==",
+                "value": "viewing_back"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "- DCM Tab <b>- keep disabled<\/b>",
+    "modified": 1499225379
+}

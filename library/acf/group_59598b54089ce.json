@@ -1,0 +1,62 @@
+{
+    "key": "group_59598b54089ce",
+    "title": "DCM Tab - Module",
+    "fields": [
+        {
+            "key": "field_5958d76f9587c",
+            "label": "Module Title",
+            "name": "dcf_module_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5958d7e89587e",
+            "label": "Module Introduction",
+            "name": "dcf_module_introduction",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "current_user",
+                "operator": "==",
+                "value": "viewing_back"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "- DCM Tab <b>- keep disabled<\/b>",
+    "modified": 1499041022
+}

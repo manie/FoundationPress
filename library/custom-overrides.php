@@ -164,7 +164,7 @@
 			'page_title' 	=> 'Theme Options',
 			'menu_title' 	=> 'Theme Options',
 			'menu_slug' 	=> 'theme_options',
-			'parent_slug' 	=> 'themes.php',
+			// 'parent_slug' 	=> 'themes.php',
 			'capability' 	=> 'edit_theme_options',
 			'icon_url' 		=> 'dashicons-dashboard',
 			'redirect' 		=> false
@@ -197,7 +197,7 @@
 				$google_maps_api_key = get_field('dcf_google_maps_api_key', 'option');
 			} else { $google_maps_api_key = null; }
 			if ( isset($google_maps_api_key) ) {
-				wp_enqueue_script( 'google-maps-api', '//maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key='.$google_maps_api_key, array( 'jquery' ), null, false );
+				wp_enqueue_script( 'google-maps-api', '//maps.googleapis.com/maps/api/js?libraries=places&key='.$google_maps_api_key, array( 'jquery' ), null, false );
 			}
 		}
 		add_action( 'wp_enqueue_scripts', 'dando_acf_google_maps_enqueue' );

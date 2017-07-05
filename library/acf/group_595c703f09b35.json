@@ -1,9 +1,9 @@
 {
-    "key": "group_5955e3e8ccb84",
-    "title": "Module - Extra Content",
+    "key": "group_595c703f09b35",
+    "title": "Module - Grid Slider",
     "fields": [
         {
-            "key": "field_59598e9f7635e",
+            "key": "field_595c703f0f01a",
             "label": "Module",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598ec193795",
+            "key": "field_595c703f0f044",
             "label": "DCM Tab - Module",
             "name": "dcm_tab_module",
             "type": "clone",
@@ -40,7 +40,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_5955e3e8d0566",
+            "key": "field_595c703f0f065",
             "label": "Content",
             "name": "",
             "type": "tab",
@@ -56,26 +56,39 @@
             "endpoint": 0
         },
         {
-            "key": "field_5955e3e8d0575",
-            "label": "Extra Content",
-            "name": "dcf_extra_content_editor",
-            "type": "wysiwyg",
+            "key": "field_595c703f0f0cd",
+            "label": "Slider iems",
+            "name": "dcf_gridslider_items",
+            "type": "gallery",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "",
+                        "operator": "=="
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
-                "class": "hide-label",
+                "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
-            "key": "field_5955e3e8d0580",
+            "key": "field_595c703f0f573",
             "label": "Options",
             "name": "",
             "type": "tab",
@@ -91,7 +104,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598ec793796",
+            "key": "field_595c703f0f60c",
             "label": "DCM Tab - Options",
             "name": "dcm_tab_options",
             "type": "clone",
@@ -112,7 +125,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_59598eaa7635f",
+            "key": "field_595c703f0f62d",
             "label": "Design",
             "name": "",
             "type": "tab",
@@ -128,7 +141,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598eca93797",
+            "key": "field_595c703f0f650",
             "label": "DCM Tab - Design",
             "name": "dcm_tab_design",
             "type": "clone",
@@ -166,5 +179,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499129427
+    "modified": 1499230360
 }

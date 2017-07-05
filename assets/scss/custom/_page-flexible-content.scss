@@ -1,17 +1,21 @@
 #page-flexible-content {
 
 	.flexible-content {
-		margin-top: 3rem;
+		// margin-top: 3rem;
 
 		&.grid {
 			@include grid-row();
 		}
 
-		&.full {}
+		&.full {
+			margin-left: 0;
+			margin-right: 0;
+			width: 100%;
+		}
 	}
 
 	.main-content {
-		margin-top: 3rem;
+		// margin-top: 3rem;
 		@include grid-row();
 	}
 }

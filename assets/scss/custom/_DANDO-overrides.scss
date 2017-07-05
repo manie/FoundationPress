@@ -4,7 +4,7 @@
 
 // Typography
 p:empty { margin-bottom: 0; }
-.entry-content {
+.entry-content, .panel-content {
 	p:last-of-type {
 		margin-bottom: 0;
 	}
@@ -14,12 +14,16 @@ p:empty { margin-bottom: 0; }
 section.container {
 
 	@include breakpoint(small) {
-		padding-left: 1em;
-		padding-right: 1em;
+		.main-content, .grid {
+			padding-left: rem-calc(15);
+			padding-right: rem-calc(15);
+		}
 	}
 
 	@include breakpoint(medium) {
-		padding-left: 2em;
-		padding-right: 2em;
+		.main-content, .grid {
+			padding-left: rem-calc(15);
+			padding-right: rem-calc(15);
+		}
 	}
 }

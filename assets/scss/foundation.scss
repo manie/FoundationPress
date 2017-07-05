@@ -98,8 +98,15 @@
 @import "templates/page-full-width";
 @import "templates/single-post";
 
-// Custom Templates & Modules
+// Custom Overrides & Page Templates
 @import "custom/DANDO-overrides";
+@import "custom/DANDO-mixins";
 @import "custom/page-flexible-content";
+
+// Custom Content
 @import "custom/fullscreen-image-slider";
+
+// Custom Flexible Modules
+@import "custom/module-SHARED";
 @import "custom/module-post-listing";
+@import "custom/module-extra-content";
