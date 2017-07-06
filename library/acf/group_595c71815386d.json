@@ -1,6 +1,6 @@
 {
     "key": "group_595c71815386d",
-    "title": "Module - Contect Form",
+    "title": "Module - Contact Form",
     "fields": [
         {
             "key": "field_595c7181578f8",
@@ -210,5 +210,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499232856
+    "modified": 1499304992
 }

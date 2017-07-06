@@ -50,6 +50,25 @@
             "default_value": "one",
             "layout": "horizontal",
             "return_format": "value"
+        },
+        {
+            "key": "field_595dac1a395c0",
+            "label": "Module Margin",
+            "name": "dcf_module_opt_margin",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Add extra margin above to separate modules?",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -69,5 +88,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM Tab <b>- keep disabled<\/b>",
-    "modified": 1499041855
+    "modified": 1499317518
 }

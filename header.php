@@ -50,10 +50,6 @@
 			</div>
 		</nav>
 
-		<?php if ( is_home() || is_front_page() ) : ?>
-			<?php get_template_part( 'template-parts/custom/fullscreen-image-slider' ); ?>
-		<?php endif; ?>
-
 	</header>
 
 	<section class="container">

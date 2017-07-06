@@ -165,30 +165,6 @@ function DANDO_register_required_plugins() {
 			'force_activation'	=> false,
 		),
 		array(
-			'name' 					=> 'Advanced Custom Fields: Image Crop Add-on',
-			'slug' 					=> 'acf-image-crop-add-on',
-			'required' 				=> true,
-			'force_activation'		=> false,
-			'force_deactivation' 	=> true,
-			'is_callable'			=> 'acf_field',
-		),
-		array(
-			'name' 					=> 'Advanced Custom Fields: Limiter',
-			'slug' 					=> 'advanced-custom-fields-limiter-field',
-			'required' 				=> true,
-			'force_activation'		=> false,
-			'force_deactivation' 	=> true,
-			'is_callable'			=> 'acf_field',
-		),
-		array(
-			'name' 					=> 'Advanced Custom Fields: Gravityforms Add-on',
-			'slug' 					=> 'acf-gravityforms-add-on',
-			'required' 				=> true,
-			'force_activation'		=> false,
-			'force_deactivation' 	=> true,
-			'is_callable'			=> 'acf_field',
-		),
-		array(
 			'name' 				=> 'Akismet',
 			'slug' 				=> 'akismet',
 			'required' 			=> false,
@@ -369,6 +345,47 @@ function DANDO_register_required_plugins() {
 		// By setting 'is_callable' to either a function from that plugin or a class method
 		// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
 		// recognize the plugin as being installed.
+
+		array(
+			'name' 					=> 'Advanced Custom Fields: Advanced Taxonomy Selector',
+			'slug' 					=> 'acf-advanced-taxonomy-selector',
+			'required' 				=> true,
+			'force_activation'		=> false,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
+		),
+		array(
+			'name' 					=> 'Advanced Custom Fields: Gravityforms Add-on',
+			'slug' 					=> 'acf-gravityforms-add-on',
+			'required' 				=> true,
+			'force_activation'		=> false,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
+		),
+		array(
+			'name' 					=> 'Advanced Custom Fields: Image Crop Add-on',
+			'slug' 					=> 'acf-image-crop-add-on',
+			'required' 				=> true,
+			'force_activation'		=> false,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
+		),
+		array(
+			'name' 					=> 'Advanced Custom Fields: Limiter',
+			'slug' 					=> 'advanced-custom-fields-limiter-field',
+			'required' 				=> true,
+			'force_activation'		=> false,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
+		),
+		array(
+			'name' 					=> 'Advanced Custom Fields: Menu Field',
+			'slug' 					=> 'menu-field-for-advanced-custom-fields',
+			'required' 				=> true,
+			'force_activation'		=> false,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
+		),
 		array(
 			'name'				=> 'WordPress SEO by Yoast',
 			'slug'				=> 'wordpress-seo',

@@ -4,14 +4,13 @@
 	$module_name = get_row_layout();
 
 	// Custom Content
-	if ( get_sub_field('dcf_extra_content_editor') ) { $extra_content = get_sub_field('dcf_extra_content_editor'); }
+	if ( get_sub_field('dcf_menu_selection') ) { $menu_selection = get_sub_field('dcf_menu_selection'); }
 
 	// Extra class for first active item
 	$active = 'posts-list';
 
 	// Module Options - Post Class array
-	$post_class[] = 'flexible-content';
-	$post_class[] = 'posts-panel';
+	$post_class[] = 'flexible-content posts-panel';
 	if ( get_sub_field('dcf_module_opt_grid') ) { $post_class[] = get_sub_field('dcf_module_opt_grid'); }
 	if ( get_sub_field('dcf_module_opt_columns') ) { $post_class[] = get_sub_field('dcf_module_opt_columns'); }
 	if ( get_sub_field('dcf_module_opt_margin') ) { $post_class[] = 'margin'; }
@@ -50,13 +49,26 @@
 			</header>
 		<?php } ?>
 
-		<?php if ( isset($extra_content) && ( !empty($extra_content) ) ) { ?>
+		<?php if ( isset($menu_selection) && ( !empty($menu_selection) ) ) { ?>
 			<div class="panel-content">
 				<section class="<?php echo $active; ?>">
-					<?php echo apply_filters('the_content', $extra_content); ?>
+					<?php
+
+						// WP Menu
+						wp_nav_menu( array(
+							'menu' 			=> $menu_selection,
+							'container' 	=> false,
+							'menu_class' 	=> 'menu-module',
+							'items_wrap' 	=> '<ul id="%1$s" class="%2$s desktop-menu" >%3$s</ul>',
+							'depth' 		=> 1,
+							'fallback_cb' 	=> false,
+						));
+
+					?>
 				</section>
 			</div>
 		<?php } ?>
+
 	</div>
 
 <?php } ?>

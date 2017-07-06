@@ -101,12 +101,12 @@
 // Custom Overrides & Page Templates
 @import "custom/DANDO-overrides";
 @import "custom/DANDO-mixins";
-@import "custom/page-flexible-content";
-
-// Custom Content
-@import "custom/fullscreen-image-slider";
 
 // Custom Flexible Modules
 @import "custom/module-SHARED";
 @import "custom/module-post-listing";
 @import "custom/module-extra-content";
+@import "custom/module-hero-slider";
+
+// Custom Page Templates
+@import "custom/page-flexible-content";

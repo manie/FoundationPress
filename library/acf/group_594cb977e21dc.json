@@ -47,6 +47,37 @@
                     "min": "1",
                     "max": "1"
                 },
+                "595dc144a782c": {
+                    "key": "595dc144a782c",
+                    "name": "hero_slider",
+                    "label": "Hero Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_595dc144a782d",
+                            "label": "DCM Hero Slider",
+                            "name": "dcm_hero_slider",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_595dc116de4ed"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "5955b9e42d25e": {
                     "key": "5955b9e42d25e",
                     "name": "horizontal_break",
@@ -201,6 +232,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "595dd82ae64d6": {
+                    "key": "595dd82ae64d6",
+                    "name": "dynamic_menu",
+                    "label": "Dynamic Menu",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_595dd82ae64d7",
+                            "label": "DCM Dynamic Menu",
+                            "name": "dcm_dynamic_menu",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_595c71a90cc91"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Module",
@@ -230,5 +292,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "- Dando Content Modules",
-    "modified": 1499232458
+    "modified": 1499322466
 }

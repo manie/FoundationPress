@@ -1,46 +1,9 @@
 {
-    "key": "group_59584bc496724",
-    "title": "Module - Post Listing",
+    "key": "group_595dc116de4ed",
+    "title": "Module - Hero Slider",
     "fields": [
         {
-            "key": "field_5958d7ab9587d",
-            "label": "Module",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_59598c5414ae9",
-            "label": "DCM Tab - Module",
-            "name": "dcm_tab_module",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "group_59598b54089ce"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_59584bc49c240",
+            "key": "field_595dc116e299f",
             "label": "Content",
             "name": "",
             "type": "tab",
@@ -56,8 +19,8 @@
             "endpoint": 0
         },
         {
-            "key": "field_5958d262a0adb",
-            "label": "Post Listing Selection",
+            "key": "field_595dc116e29bb",
+            "label": "Slider Listing Selection",
             "name": "dcf_post_listing_selection",
             "type": "radio",
             "instructions": "",
@@ -80,59 +43,40 @@
             "return_format": "value"
         },
         {
-            "key": "field_59584bc49c2c6",
-            "label": "Post Listing Type",
-            "name": "dcf_post_listing_type",
-            "type": "post_type_selector",
-            "instructions": "Select a post type to restrict the listing to.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5958d262a0adb",
-                        "operator": "==",
-                        "value": "recent"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "select_type": 0
-        },
-        {
-            "key": "field_595d97cbf0eb4",
-            "label": "Post Listing Term Restriction",
+            "key": "field_595dc116e29ef",
+            "label": "Slider Listing Term Restriction",
             "name": "dcf_post_listing_term_restriction",
             "type": "advanced_taxonomy_selector",
-            "instructions": "Select a category to restrict the listing to. <strong>Overrides post type selection.<\/strong>",
+            "instructions": "Select a category to restrict the listing to.",
             "required": 0,
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5958d262a0adb",
+                        "field": "field_595dc116e29bb",
                         "operator": "==",
                         "value": "recent"
                     }
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "data_type": "terms",
-            "taxonomies": "",
-            "post_type": "",
+            "taxonomies": [
+                "slider_cat"
+            ],
+            "post_type": [
+                "sliders"
+            ],
             "field_type": "select",
             "allow_null": 1,
             "return_value": "object"
         },
         {
-            "key": "field_5958d90e3b30d",
-            "label": "Post Listing Count",
+            "key": "field_595dc116e29fe",
+            "label": "Slider Listing Count",
             "name": "dcf_post_listing_count",
             "type": "number",
             "instructions": "",
@@ -140,7 +84,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5958d262a0adb",
+                        "field": "field_595dc116e29bb",
                         "operator": "==",
                         "value": "recent"
                     }
@@ -160,8 +104,8 @@
             "step": 1
         },
         {
-            "key": "field_5958d82f9587f",
-            "label": "Post Listing Items",
+            "key": "field_595dc116e2a11",
+            "label": "Slider Listing Items",
             "name": "dcf_post_listing_items",
             "type": "post_object",
             "instructions": "",
@@ -169,7 +113,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5958d262a0adb",
+                        "field": "field_595dc116e29bb",
                         "operator": "==",
                         "value": "custom"
                     }
@@ -180,7 +124,9 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [],
+            "post_type": [
+                "sliders"
+            ],
             "taxonomy": [],
             "allow_null": 0,
             "multiple": 1,
@@ -188,7 +134,7 @@
             "ui": 1
         },
         {
-            "key": "field_59584bc49d97c",
+            "key": "field_595dc116e2a1f",
             "label": "Options",
             "name": "",
             "type": "tab",
@@ -204,7 +150,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598d3d03e8e",
+            "key": "field_595dc116e2a3d",
             "label": "DCM Tab - Options",
             "name": "dcm_tab_options",
             "type": "clone",
@@ -218,43 +164,6 @@
             },
             "clone": [
                 "group_59598d06c3fe1"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_59587d0e1260c",
-            "label": "Design",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_59598da011d81",
-            "label": "DCM Tab - Design",
-            "name": "dcm_tab_design",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "group_59598d65ba0c5"
             ],
             "display": "seamless",
             "layout": "block",
@@ -279,5 +188,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499312178
+    "modified": 1499318841
 }

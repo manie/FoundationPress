@@ -1,13 +1,17 @@
 <?php
 
-	// Content Module
 	$module_name = get_row_layout();
+	$post_class[] = 'flexible-content';
+	$post_class[] = 'hero-slider';
+	$post_class[] = 'orbit';
 
-	// Custom Query vars
+	  // Custom Query vars
+	$post_type[] = 'sliders';
+
 	if ( get_sub_field('dcf_post_listing_selection') ) { $listing_selection = get_sub_field('dcf_post_listing_selection'); }
 	if ( get_sub_field('dcf_post_listing_type') ) {
 		$post_type[] = get_sub_field('dcf_post_listing_type');
-	} else { $post_type[] = 'post'; }
+	} else { $post_type[] = 'slider'; }
 	if ( get_sub_field('dcf_post_listing_term_restriction') ) { $post_term_restriction[] = get_sub_field('dcf_post_listing_term_restriction'); }
 	if ( get_sub_field('dcf_post_listing_count') ) {
 		$post_count = get_sub_field('dcf_post_listing_count');
@@ -69,60 +73,79 @@
 	$count = $query->post_count;
 
 	// Extra class for first active item
-	$i = 0; if ( $i == 1 ) { $active = 'pinned-post'; } else { $active = 'posts-list'; }
+	$i = 0; if ( $i == 1 ) { $active = 'is-active'; }
 
-	// Module Options - Post Class array
-	$post_class[] = 'flexible-content';
-	$post_class[] = 'posts-panel';
 	if ( get_sub_field('dcf_module_opt_grid') ) { $post_class[] = get_sub_field('dcf_module_opt_grid'); }
 	if ( get_sub_field('dcf_module_opt_columns') ) { $post_class[] = get_sub_field('dcf_module_opt_columns'); }
 	if ( get_sub_field('dcf_module_opt_margin') ) { $post_class[] = 'margin'; }
 	$post_class_string = implode(" ", $post_class);
-
-	// Module Content - Text strings with fallback
-	if ( get_sub_field('dcf_module_title') ) { $module_title = get_sub_field('dcf_module_title'); }
-	if ( get_sub_field('dcf_module_introduction') ) { $module_introduction = get_sub_field('dcf_module_introduction'); }
-
-	// Module Design - CSS colour & background
-	if ( get_sub_field('dcf_module_design_bg_colour') ) { $module_bg_colour = get_sub_field('dcf_module_design_bg_colour'); }
-	if ( get_sub_field('dcf_module_design_bg_image') ) { $module_bg_image = get_sub_field('dcf_module_design_bg_image'); }
-	if ( isset($module_bg_colour) ) { $module_design_style = 'style="background-color:' . $module_bg_colour . '"'; }
-	if ( isset($module_bg_image) ) {
-		$image_url = $module_bg_image['url'];
-		$image_size = 'large';
-		$image_with_size = $module_bg_image['sizes'][ $image_size ];
-		$module_design_style = 'style="background-image: url(' . $image_with_size . ')"';
-	}
-
 ?>
 
 <?php if ( $query->have_posts() ) { ?>
 
-	<div class="<?php echo $post_class_string; ?>" data-module="<?php echo $module_name; ?>" <?php if ( isset($module_design_style) ) { echo $module_design_style; } ?>>
+	<div class="<?php echo $post_class_string; ?>" role="region" aria-label="FullScreen Slider"  data-module="<?php echo $module_name; ?> data-count="<?php echo $count; ?>" data-orbit>
+		<ul class="orbit-container">
 
-		<?php if ( isset($module_title) || isset($module_introduction) ) { ?>
-			<header class="panel-header">
-				<?php if ( isset($module_title) && ( !empty($module_title) ) ) { ?>
-					<h1 class="panel-title"><?php echo $module_title; ?></h1>
-				<?php } ?>
-				<?php if ( isset($module_introduction) && ( !empty($module_introduction) ) ) { ?>
-					<div class="panel-introduction"><?php echo $module_introduction; ?></div>
-				<?php } ?>
-			</header>
-		<?php } ?>
+			<?php if ( $count > 1 ) { ?>
+				<button class="orbit-previous">
+					<span class="show-for-sr">Previous Slide</span>
+					<span class="nav fa fa-chevron-left fa-3x"></span>
+				</button>
+				<button class="orbit-next">
+					<span class="show-for-sr">Next Slide</span>
+					<span class="nav fa fa-chevron-right fa-3x"></span>
+				</button>
+			<?php } ?>
 
-		<?php while ( $query->have_posts() ) { $query->the_post(); ?>
-			<div class="panel-content">
-				<section class="<?php echo $active; ?>">
-					<?php get_template_part( 'template-parts/content', 'custom'); ?>
-				</section>
-			</div>
-		<?php } ?>
+			<?php while ( $query->have_posts() ) { $query->the_post(); ?>
+
+				<?php
+					// ACF fields
+					$image = get_field('dcf_slide_image');
+					$overlay = get_field('dcf_slide_overlay');
+					$caption = get_field('dcf_slide_caption');
+					$link_type = get_field('dcf_slide_link');
+					$link_url = get_field('dcf_slide_link_url');
+					$link_text = get_field('dcf_slide_link_text');
+
+					if( !empty($image) ) {
+
+						// Image vars
+						$image_id = $image['id'];
+						$image_url = $image['url'];
+
+						// Get WP responsive markup
+						$responsive_image = wp_get_attachment_image( $image_id, 'full', false, array( 'class' => 'orbit-image' ) );
+						$responsive_image_src = wp_get_attachment_image_url( $image_id, 'full' );
+					}
+				?>
+
+				<li class="orbit-slide<?php if ( isset($active) ) { echo $active; } ?>" <?php if ( isset($responsive_image_src) ) { echo 'style="background-image: url(\''.$responsive_image_src.'\')'; } ?>">
+
+					<?php if ( $link_type == 'slide' && !empty($link_url) ) { ?><a href="<?php echo $link_url; ?>"><?php } ?>
+
+					<?php if ( isset($responsive_image) ) { echo apply_filters( 'the_content', $responsive_image ); } ?>
+					<?php if ( isset($caption) ) { ?>
+						<figcaption class="orbit-caption">
+							<h1><?php echo $caption; ?></h1>
+							<?php if ( $link_type == 'button' && !empty($link_url) ) { ?>
+								<a href="<?php echo $link_url; ?>" class="button"><?php if (!empty($link_text)) { echo $link_text; } else { echo 'Find our more'; } ?></a>
+							<?php } ?>
+						</figcaption>
+					<?php } ?>
+					<?php if ( isset($overlay) ) { ?><div class="orbit-overlay <?php echo $overlay; ?>"></div><?php } ?>
+
+					<?php if ( $link_type == 'slide' && !empty($link_url) ) { ?></a><?php } ?>
+
+				</li>
+			<?php } ?>
+
+		</ul>
 	</div>
 
 <?php } ?>
 
 <?php
-  // Restore original Post Data
-  wp_reset_postdata();
+	// Restore original Post Data
+	wp_reset_postdata();
 ?>

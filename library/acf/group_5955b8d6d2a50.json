@@ -3,6 +3,22 @@
     "title": "Positioner - Primary Content",
     "fields": [
         {
+            "key": "field_595dafc880bed",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
             "key": "field_5955b8ecf50bf",
             "label": "Primary Content",
             "name": "",
@@ -18,6 +34,80 @@
             "message": "<strong>Use the main editor at the top of the page to add your content.<\/strong>\r\n<em>This is just a placeholder module to aid in horizontal layout positioning.<\/em>",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_595dafd680bee",
+            "label": "Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_595db002b44c0",
+            "label": "DCM Tab - Options",
+            "name": "dcm_tab_options",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_59598d06c3fe1"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_595db004b44c1",
+            "label": "Design",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_595db008b44c2",
+            "label": "DCM Tab - Design",
+            "name": "dcm_tab_design",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_59598d65ba0c5"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -37,5 +127,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1498971192
+    "modified": 1499316356
 }

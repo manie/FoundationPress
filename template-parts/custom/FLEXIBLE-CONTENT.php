@@ -10,13 +10,13 @@
 
 				get_template_part( 'template-parts/custom/module-primary-content' );
 
+			elseif( get_row_layout() == 'hero_slider' ):
+
+				get_template_part( 'template-parts/custom/module-hero-slider' );
+
 			elseif( get_row_layout() == 'horizontal_break' ):
 
 				get_template_part( 'template-parts/custom/module-hr' );
-
-			elseif( get_row_layout() == 'grid_slider' ):
-
-				get_template_part( 'template-parts/custom/module-grid-slider' );
 
 			elseif( get_row_layout() == 'extra_content' ):
 
@@ -25,6 +25,18 @@
 			elseif( get_row_layout() == 'post_listing' ):
 
 				get_template_part( 'template-parts/custom/module-post-listing' );
+
+			elseif( get_row_layout() == 'grid_slider' ):
+
+				get_template_part( 'template-parts/custom/module-grid-slider' );
+
+			elseif( get_row_layout() == 'contact_form' ):
+
+				get_template_part( 'template-parts/custom/module-contact-form' );
+
+			elseif( get_row_layout() == 'dynamic_menu' ):
+
+				get_template_part( 'template-parts/custom/module-dynamic-menu' );
 
 			endif;
 

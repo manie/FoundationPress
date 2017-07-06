@@ -4,14 +4,15 @@
 	$module_name = get_row_layout();
 
 	// Custom Content
-	if ( get_sub_field('dcf_extra_content_editor') ) { $extra_content = get_sub_field('dcf_extra_content_editor'); }
+	if ( get_sub_field('dcf_gravity_form_selection') ) { $form_selection = get_sub_field('dcf_gravity_form_selection'); }
+	if ( get_sub_field('dcf_gravity_form_options') ) { $form_options = get_sub_field('dcf_gravity_form_options'); }
+	if ( get_sub_field('dcf_gravity_form_tabindex') ) { $form_tabindex = get_sub_field('dcf_gravity_form_tabindex'); }
 
 	// Extra class for first active item
 	$active = 'posts-list';
 
 	// Module Options - Post Class array
-	$post_class[] = 'flexible-content';
-	$post_class[] = 'posts-panel';
+	$post_class[] = 'flexible-content posts-panel';
 	if ( get_sub_field('dcf_module_opt_grid') ) { $post_class[] = get_sub_field('dcf_module_opt_grid'); }
 	if ( get_sub_field('dcf_module_opt_columns') ) { $post_class[] = get_sub_field('dcf_module_opt_columns'); }
 	if ( get_sub_field('dcf_module_opt_margin') ) { $post_class[] = 'margin'; }
@@ -50,13 +51,38 @@
 			</header>
 		<?php } ?>
 
-		<?php if ( isset($extra_content) && ( !empty($extra_content) ) ) { ?>
+		<?php if ( isset($form_selection) && ( !empty($form_selection) ) ) { ?>
 			<div class="panel-content">
 				<section class="<?php echo $active; ?>">
-					<?php echo apply_filters('the_content', $extra_content); ?>
+					<?php
+
+						// Gravity form ID to be used
+						$form_id = $form_selection['id'];
+
+						// Gravity function call vars
+						$display_title = false;
+						$display_description = false;
+						$display_inactive = false;
+						$field_values = null;
+						$ajax = false;
+						$tabindex = null;
+						$echo = true;
+
+						if ( isset($form_options) ) {
+							if( in_array('title', $form_options) ) { $display_title = true; }
+							if( in_array('description', $form_options) ) { $display_description = true; }
+							if( in_array('ajax', $form_options) ) { $ajax = true; }
+						}
+						if ( isset($form_tabindex) ) { $tabindex = $form_tabindex; }
+
+						if ( isset($form_id) ) {
+							gravity_form( $form_id, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, $echo );
+						}
+					?>
 				</section>
 			</div>
 		<?php } ?>
+
 	</div>
 
 <?php } ?>
