@@ -35,7 +35,6 @@
 		// Remove Media posts
 		if (in_array('attachment', $post_types)) {
 		    unset($post_types[array_search('attachment',$post_types)]);
-		    // unset($post_types[array_search('sliders',$post_types)]);
 		}
 
 		$args['post_type'] = $post_types;
@@ -47,6 +46,23 @@
 
 	// filter for every field
 	add_filter('acf/fields/post_object/query', 'dando_post_object_query', 10, 3);
+
+	function dando_acf_flexible_content_layout_title( $title, $field, $layout, $i ) {
+
+		// remove layout title from text
+		// $title = '';
+
+		// add text sub field
+		if( $module_title = get_sub_field('dcf_module_title') ) {
+			$title .= ' - <strong>' . $module_title . '</strong>';
+		}
+
+		// return
+		return $title;
+	}
+
+	add_filter('acf/fields/flexible_content/layout_title/name=dcm', 'dando_acf_flexible_content_layout_title', 10, 4);
+
 
 // Remove h1 from the WordPress editor.
 	function dando_remove_h1_from_editor( $init ) {

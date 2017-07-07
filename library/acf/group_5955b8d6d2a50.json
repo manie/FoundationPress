@@ -20,7 +20,7 @@
         },
         {
             "key": "field_5955b8ecf50bf",
-            "label": "Primary Content",
+            "label": "PLEASE NOTE:",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -28,7 +28,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "hide-label",
+                "class": "",
                 "id": ""
             },
             "message": "<strong>Use the main editor at the top of the page to add your content.<\/strong>\r\n<em>This is just a placeholder module to aid in horizontal layout positioning.<\/em>",
@@ -127,5 +127,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499316356
+    "modified": 1499425647
 }

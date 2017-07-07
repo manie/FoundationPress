@@ -1,44 +1,28 @@
 <?php
 
+	// Include required module variables
+		include(locate_template('template-parts/custom/VARS-modules.php'));
+
 	// Content Module
-	$module_name = get_row_layout();
+		$module_label = "Contact Form";
+		$module_name = get_row_layout();
 
-	// Custom Content
-	if ( get_sub_field('dcf_gravity_form_selection') ) { $form_selection = get_sub_field('dcf_gravity_form_selection'); }
-	if ( get_sub_field('dcf_gravity_form_options') ) { $form_options = get_sub_field('dcf_gravity_form_options'); }
-	if ( get_sub_field('dcf_gravity_form_tabindex') ) { $form_tabindex = get_sub_field('dcf_gravity_form_tabindex'); }
+	// Extra class for panel content
+		$content_class = '';
 
-	// Extra class for first active item
-	$active = 'posts-list';
+	// Add to default post class array
+		// $post_class_array[] = 'posts-panel';
 
-	// Module Options - Post Class array
-	$post_class[] = 'flexible-content posts-panel';
-	if ( get_sub_field('dcf_module_opt_grid') ) { $post_class[] = get_sub_field('dcf_module_opt_grid'); }
-	if ( get_sub_field('dcf_module_opt_columns') ) { $post_class[] = get_sub_field('dcf_module_opt_columns'); }
-	if ( get_sub_field('dcf_module_opt_margin') ) { $post_class[] = 'margin'; }
-	if ( get_sub_field('dcf_module_design_bg_image') ) { $post_class[] = 'bgimg'; }
-	$post_class_string = implode(" ", $post_class);
-
-	// Module Content - Text string with fallback
-	if ( get_sub_field('dcf_module_title') ) { $module_title = get_sub_field('dcf_module_title'); }
-	if ( get_sub_field('dcf_module_introduction') ) { $module_introduction = get_sub_field('dcf_module_introduction'); }
-
-	// Module Design - CSS colour & background
-	if ( get_sub_field('dcf_module_design_bg_colour') ) { $module_bg_colour = get_sub_field('dcf_module_design_bg_colour'); }
-	if ( get_sub_field('dcf_module_design_bg_image') ) { $module_bg_image = get_sub_field('dcf_module_design_bg_image'); }
-	if ( isset($module_bg_colour) ) { $module_design_style = 'style="background-color:' . $module_bg_colour . '"'; }
-	if ( isset($module_bg_image) ) {
-		$image_url = $module_bg_image['url'];
-		$image_size = 'large';
-		$image_with_size = $module_bg_image['sizes'][ $image_size ];
-		$module_design_style = 'style="background-image: url(' . $image_with_size . ')"';
-	}
+	// Custom Content variables
+		if ( get_sub_field('dcf_gravity_form_selection') ) { $form_selection = get_sub_field('dcf_gravity_form_selection'); }
+		if ( get_sub_field('dcf_gravity_form_options') ) { $form_options = get_sub_field('dcf_gravity_form_options'); }
+		if ( get_sub_field('dcf_gravity_form_tabindex') ) { $form_tabindex = get_sub_field('dcf_gravity_form_tabindex'); }
 
 ?>
 
 <?php if ( have_posts() ) { ?>
 
-	<div class="<?php echo $post_class_string; ?>" data-module="<?php echo $module_name; ?>" <?php if ( isset($module_design_style) ) { echo $module_design_style; } ?>>
+	<article aria-label="<?php echo $module_label; ?>" data-module="<?php echo $module_name; ?>" <?php post_class($post_class_array); ?> <?php if ( isset($module_design_style) ) { echo $module_design_style; } ?>>
 
 		<?php if ( isset($module_title) || isset($module_introduction) ) { ?>
 			<header class="panel-header">
@@ -53,7 +37,7 @@
 
 		<?php if ( isset($form_selection) && ( !empty($form_selection) ) ) { ?>
 			<div class="panel-content">
-				<section class="<?php echo $active; ?>">
+				<section class="<?php echo $content_class; ?>">
 					<?php
 
 						// Gravity form ID to be used
@@ -82,12 +66,11 @@
 				</section>
 			</div>
 		<?php } ?>
-
-	</div>
+	</article>
 
 <?php } ?>
 
 <?php
-  // Restore original Post Data
-  wp_reset_postdata();
+	// Restore original Post Data
+	wp_reset_postdata();
 ?>

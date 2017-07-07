@@ -25,7 +25,7 @@ $panel-header-color: $dark-gray;
 /// @type Number
 $panel-header-font-size: rem-calc(26) !default;
 
-.posts-panel{
+.module-panel{
 	// @include grid-col-row();
 	float: none !important;
 	margin: $panel-margin;
@@ -48,6 +48,8 @@ $panel-header-font-size: rem-calc(26) !default;
 
 	.panel-content{
 		padding: rem-calc(15 0);
+
+		@include clearfix;
 	}
 
 	&.full {

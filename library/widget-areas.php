@@ -27,6 +27,16 @@ function foundationpress_sidebar_widgets() {
 	  'before_title' => '<h6>',
 	  'after_title' => '</h6>',
 	));
+
+	register_sidebar(array(
+	  'id' => 'module-widgets',
+	  'name' => __( 'Module widgets', 'foundationpress' ),
+	  'description' => __( 'Drag widgets to this module container', 'foundationpress' ),
+	  'before_widget' => '<article id="%1$s" class="widget %2$s">',
+	  'after_widget' => '</article>',
+	  'before_title' => '<h6>',
+	  'after_title' => '</h6>',
+	));
 }
 
 add_action( 'widgets_init', 'foundationpress_sidebar_widgets' );

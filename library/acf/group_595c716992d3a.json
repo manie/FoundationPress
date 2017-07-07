@@ -57,22 +57,19 @@
         },
         {
             "key": "field_595c71699753b",
-            "label": "Extra Content",
-            "name": "dcf_extra_content_editor",
-            "type": "wysiwyg",
+            "label": "Widget Area",
+            "name": "dcf_widget_area",
+            "type": "widget_area",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "hide-label",
+                "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
+            "allow_null": 0,
+            "display_or_return": "return"
         },
         {
             "key": "field_595c716997549",
@@ -166,5 +163,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499230581
+    "modified": 1499431968
 }

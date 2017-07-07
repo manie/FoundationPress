@@ -4,18 +4,17 @@
 		include(locate_template('template-parts/custom/VARS-modules.php'));
 
 	// Content Module
-		$module_label = "Extra Content";
+		$module_label = "Widget Area";
 		$module_name = get_row_layout();
 
 	// Extra class for panel content
 		$content_class = '';
 
 	// Add to default post class array
-		// $post_class_array[] = 'posts-panel';
+		$post_class_array[] = 'posts-panel';
 
 	// Custom Content variables
-		if ( get_sub_field('dcf_extra_content_editor') ) { $extra_content = get_sub_field('dcf_extra_content_editor'); }
-		// NB: No fallback
+		if ( get_sub_field('dcf_widget_area') ) { $widget_area = get_sub_field('dcf_widget_area'); }
 
 ?>
 
@@ -34,13 +33,10 @@
 			</header>
 		<?php } ?>
 
-		<?php if ( isset($extra_content) && ( !empty($extra_content) ) ) { ?>
+		<?php if ( isset($widget_area) && ( !empty($widget_area) ) ) { ?>
 			<div class="panel-content">
 				<section class="<?php echo $content_class; ?>">
-					<?php
-						// Apply WP content filter
-						echo apply_filters('the_content', $extra_content);
-					?>
+					<?php dynamic_sidebar( $widget_area ); ?>
 				</section>
 			</div>
 		<?php } ?>

@@ -61,18 +61,18 @@
             "name": "dcf_extra_content_editor",
             "type": "wysiwyg",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "hide-label",
+                "class": "",
                 "id": ""
             },
             "default_value": "",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
-            "delay": 0
+            "delay": 1
         },
         {
             "key": "field_5955e3e8d0580",
@@ -166,5 +166,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499129427
+    "modified": 1499427209
 }

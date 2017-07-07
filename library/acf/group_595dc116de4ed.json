@@ -80,7 +80,7 @@
             "name": "dcf_post_listing_count",
             "type": "number",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": [
                 [
                     {
@@ -109,7 +109,7 @@
             "name": "dcf_post_listing_items",
             "type": "post_object",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": [
                 [
                     {
@@ -188,5 +188,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499318841
+    "modified": 1499431538
 }

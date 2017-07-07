@@ -16,16 +16,16 @@
                 "id": ""
             },
             "layouts": {
-                "5955b9972d25c": {
-                    "key": "5955b9972d25c",
-                    "name": "primary_content",
-                    "label": "Primary Content",
+                "595c785ed2de5": {
+                    "key": "595c785ed2de5",
+                    "name": "contact_form",
+                    "label": "Contact Form",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5955b9a62d25d",
-                            "label": "DCM Primary Content",
-                            "name": "dcm_primary_content",
+                            "key": "field_595c785ed2de6",
+                            "label": "DCM Contact Form",
+                            "name": "dcm_contact_form",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -36,7 +36,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5955b8d6d2a50"
+                                "group_595c71815386d"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -44,8 +44,132 @@
                             "prefix_name": 0
                         }
                     ],
-                    "min": "1",
-                    "max": "1"
+                    "min": "",
+                    "max": ""
+                },
+                "595dd82ae64d6": {
+                    "key": "595dd82ae64d6",
+                    "name": "dynamic_menu",
+                    "label": "Dynamic Menu",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_595dd82ae64d7",
+                            "label": "DCM Dynamic Menu",
+                            "name": "dcm_dynamic_menu",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_595c71a90cc91"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5955e495792c9": {
+                    "key": "5955e495792c9",
+                    "name": "extra_content",
+                    "label": "Extra Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5955e495792ca",
+                            "label": "DCM Extra Content",
+                            "name": "dcm_extra_content",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5955e3e8ccb84"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "595f1db1ed6fd": {
+                    "key": "595f1db1ed6fd",
+                    "name": "extra_content_media",
+                    "label": "Extra Content + Media",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_595f1db1ed6fe",
+                            "label": "DCM Extra Content + Media",
+                            "name": "dcm_extra_content_media",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_595f1d20173fc"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "594cba9ba61ef": {
+                    "key": "594cba9ba61ef",
+                    "name": "grid_slider",
+                    "label": "Grid Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_594cbad892770",
+                            "label": "DCM Grid Slider",
+                            "name": "dcm_grid_slider",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_595c703f09b35"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 },
                 "595dc144a782c": {
                     "key": "595dc144a782c",
@@ -109,37 +233,6 @@
                     "min": "",
                     "max": ""
                 },
-                "5955e495792c9": {
-                    "key": "5955e495792c9",
-                    "name": "extra_content",
-                    "label": "Extra Content",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5955e495792ca",
-                            "label": "DCM Extra Content",
-                            "name": "dcm_extra_content",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_5955e3e8ccb84"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "59583dd099a4a": {
                     "key": "59583dd099a4a",
                     "name": "post_listing",
@@ -171,16 +264,16 @@
                     "min": "",
                     "max": ""
                 },
-                "594cba9ba61ef": {
-                    "key": "594cba9ba61ef",
-                    "name": "grid_slider",
-                    "label": "Grid Slider",
+                "5955b9972d25c": {
+                    "key": "5955b9972d25c",
+                    "name": "primary_content",
+                    "label": "Primary Content",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_594cbad892770",
-                            "label": "DCM Grid Slider",
-                            "name": "dcm_grid_slider",
+                            "key": "field_5955b9a62d25d",
+                            "label": "DCM Primary Content",
+                            "name": "dcm_primary_content",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -191,7 +284,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_595c703f09b35"
+                                "group_5955b8d6d2a50"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -200,47 +293,16 @@
                         }
                     ],
                     "min": "",
-                    "max": ""
+                    "max": "1"
                 },
-                "595c785ed2de5": {
-                    "key": "595c785ed2de5",
-                    "name": "contact_form",
-                    "label": "Contact Form",
+                "595f0af6b6e7d": {
+                    "key": "595f0af6b6e7d",
+                    "name": "widget_area",
+                    "label": "Widget Area",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_595c785ed2de6",
-                            "label": "DCM Contact Form",
-                            "name": "dcm_contact_form",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_595c71815386d"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "595dd82ae64d6": {
-                    "key": "595dd82ae64d6",
-                    "name": "dynamic_menu",
-                    "label": "Dynamic Menu",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_595dd82ae64d7",
+                            "key": "field_595f0af6b6e7e",
                             "label": "DCM Dynamic Menu",
                             "name": "dcm_dynamic_menu",
                             "type": "clone",
@@ -253,7 +315,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_595c71a90cc91"
+                                "group_595c716992d3a"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -280,7 +342,7 @@
             {
                 "param": "post_template",
                 "operator": "==",
-                "value": "page-templates\/CUSTOM-flexible-content.php"
+                "value": "page-templates\/flexible-content.php"
             }
         ]
     ],
@@ -292,5 +354,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "- Dando Content Modules",
-    "modified": 1499322466
+    "modified": 1499430744
 }

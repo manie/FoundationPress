@@ -1,9 +1,9 @@
 {
-    "key": "group_59584bc496724",
-    "title": "Module - Post Listing",
+    "key": "group_595f1d20173fc",
+    "title": "Module - Extra Content + Media",
     "fields": [
         {
-            "key": "field_5958d7ab9587d",
+            "key": "field_595f1d201e416",
             "label": "Module",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598c5414ae9",
+            "key": "field_595f1d201e428",
             "label": "DCM Tab - Module",
             "name": "dcm_tab_module",
             "type": "clone",
@@ -40,7 +40,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_59584bc49c240",
+            "key": "field_595f1d201e434",
             "label": "Content",
             "name": "",
             "type": "tab",
@@ -56,9 +56,44 @@
             "endpoint": 0
         },
         {
-            "key": "field_5958d262a0adb",
-            "label": "Post Listing Selection",
-            "name": "dcf_post_listing_selection",
+            "key": "field_595f1d201e43f",
+            "label": "Extra Content",
+            "name": "dcf_extra_content_editor",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_595f1d340fb59",
+            "label": "Media",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_595f1d3e0fb5a",
+            "label": "Extra Media Type",
+            "name": "dcf_extra_media_type",
             "type": "radio",
             "instructions": "",
             "required": 0,
@@ -69,80 +104,30 @@
                 "id": ""
             },
             "choices": {
-                "recent": "Most recent posts",
-                "custom": "Custom post selection"
+                "image": "Image",
+                "video": "Video",
+                "slider": "Slider"
             },
             "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
-            "default_value": "recent",
+            "default_value": "",
             "layout": "horizontal",
             "return_format": "value"
         },
         {
-            "key": "field_59584bc49c2c6",
-            "label": "Post Listing Type",
-            "name": "dcf_post_listing_type",
-            "type": "post_type_selector",
-            "instructions": "Select a post type to restrict the listing to. <strong>Defaults to posts.<\/strong>",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5958d262a0adb",
-                        "operator": "==",
-                        "value": "recent"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "select_type": 0
-        },
-        {
-            "key": "field_595d97cbf0eb4",
-            "label": "Post Listing Term Restriction",
-            "name": "dcf_post_listing_term_restriction",
-            "type": "advanced_taxonomy_selector",
-            "instructions": "Select a category to restrict the listing to. <strong>Overrides post type selection.<\/strong>",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5958d262a0adb",
-                        "operator": "==",
-                        "value": "recent"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "data_type": "terms",
-            "taxonomies": "",
-            "post_type": "",
-            "field_type": "select",
-            "allow_null": 1,
-            "return_value": "object"
-        },
-        {
-            "key": "field_5958d90e3b30d",
-            "label": "Post Listing Count",
-            "name": "dcf_post_listing_count",
-            "type": "number",
+            "key": "field_595f23a5c1c8d",
+            "label": "Extra Media Image",
+            "name": "dcf_extra_media_image",
+            "type": "image_crop",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5958d262a0adb",
+                        "field": "field_595f1d3e0fb5a",
                         "operator": "==",
-                        "value": "recent"
+                        "value": "image"
                     }
                 ]
             ],
@@ -151,27 +136,30 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "#",
-            "append": "",
-            "min": 1,
-            "max": 99,
-            "step": 1
+            "crop_type": "hard",
+            "target_size": "medium",
+            "width": "",
+            "height": "",
+            "preview_size": "medium",
+            "force_crop": "no",
+            "save_in_media_library": "yes",
+            "retina_mode": "no",
+            "save_format": "object",
+            "library": "all"
         },
         {
-            "key": "field_5958d82f9587f",
-            "label": "Post Listing Items",
-            "name": "dcf_post_listing_items",
-            "type": "post_object",
+            "key": "field_595f2408c1c8e",
+            "label": "Extra Media Video",
+            "name": "dcf_extra_media_video",
+            "type": "oembed",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5958d262a0adb",
+                        "field": "field_595f1d3e0fb5a",
                         "operator": "==",
-                        "value": "custom"
+                        "value": "video"
                     }
                 ]
             ],
@@ -180,15 +168,44 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 1,
-            "return_format": "id",
-            "ui": 1
+            "width": "",
+            "height": ""
         },
         {
-            "key": "field_59584bc49d97c",
+            "key": "field_595f2426c1c8f",
+            "label": "Extra Media Slider",
+            "name": "dcf_extra_media_slider",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_595f1d3e0fb5a",
+                        "operator": "==",
+                        "value": "slider"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_595f1d201e44b",
             "label": "Options",
             "name": "",
             "type": "tab",
@@ -204,7 +221,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598d3d03e8e",
+            "key": "field_595f1d201e457",
             "label": "DCM Tab - Options",
             "name": "dcm_tab_options",
             "type": "clone",
@@ -225,7 +242,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_59587d0e1260c",
+            "key": "field_595f1d201e463",
             "label": "Design",
             "name": "",
             "type": "tab",
@@ -241,7 +258,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59598da011d81",
+            "key": "field_595f1d201e46e",
             "label": "DCM Tab - Design",
             "name": "dcm_tab_design",
             "type": "clone",
@@ -279,5 +296,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499431703
+    "modified": 1499429706
 }

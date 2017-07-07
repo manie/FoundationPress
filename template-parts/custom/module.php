@@ -1,0 +1,34 @@
+<?php
+
+	// Include required module variables
+		include(locate_template('template-parts/custom/VARS-modules.php'));
+
+	// Content Module
+		$module_label = "Flexible Module";
+		$module_name = get_row_layout();
+
+	// Extra class for panel content
+		$content_class = '';
+
+	// Add to default post class array
+		$post_class_array[] = 'main-content';
+
+	// Custom Content variables
+		if ( get_sub_field('dcf_widget_area') ) { $widget_area = get_sub_field('dcf_widget_area'); }
+
+?>
+
+<?php if ( have_posts() ) { ?>
+
+	<article aria-label="<?php echo $module_label; ?>" data-module="<?php echo $module_name; ?>" <?php post_class($post_class_array); ?> <?php if ( isset($module_design_style) ) { echo $module_design_style; } ?>>
+
+		<!-- No Flexible Modules Selected -->
+
+	</article>
+
+<?php } ?>
+
+<?php
+	// Restore original Post Data
+	wp_reset_postdata();
+?>

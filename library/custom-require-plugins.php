@@ -150,6 +150,15 @@ function DANDO_register_required_plugins() {
 			'force_deactivation' 	=> true,
 			'is_callable'			=> 'acf_field',
 		),
+		array(
+			'name' 					=> 'Advanced Custom Fields: Widget Area',
+			'slug' 					=> 'acf-widget-arear',
+			'source' 				=> 'https://github.com/dustyf/acf-widget-area/archive/master.zip',
+			'required' 				=> true,
+			'force_activation'		=> false,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
+		),
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		// array(

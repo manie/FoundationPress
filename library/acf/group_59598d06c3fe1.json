@@ -31,7 +31,7 @@
             "label": "Column Display",
             "name": "dcf_module_opt_columns",
             "type": "radio",
-            "instructions": "",
+            "instructions": "This option will only take effect if module allows.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -40,14 +40,48 @@
                 "id": ""
             },
             "choices": {
-                "one": "One Column",
-                "two": "Two Columns",
-                "three": "Three Columns"
+                "col-1": "One Column",
+                "col-2": "Two Columns"
             },
             "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
-            "default_value": "one",
+            "default_value": "col-1",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_595f2905b1aea",
+            "label": "Column Two Column Ratio",
+            "name": "dcf_module_opt_2_ratio",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59584bc49dae2",
+                        "operator": "==",
+                        "value": "col-2"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "20-80": "20\/80",
+                "30-70": "30\/70",
+                "50-50": "50\/50",
+                "70-30": "70\/30",
+                "80-20": "80\/20"
+            },
+            "allow_null": 1,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
             "layout": "horizontal",
             "return_format": "value"
         },
@@ -88,5 +122,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM Tab <b>- keep disabled<\/b>",
-    "modified": 1499317518
+    "modified": 1499426989
 }
