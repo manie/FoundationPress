@@ -93,7 +93,7 @@ function DANDO_register_required_plugins() {
 			'source'             => get_template_directory() . '/library/plugins/gravityforms.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '2.2.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
@@ -105,8 +105,8 @@ function DANDO_register_required_plugins() {
 			'source'             => get_template_directory() . '/library/plugins/wp-migrate-db-pro.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '1.7.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
@@ -117,8 +117,8 @@ function DANDO_register_required_plugins() {
 			'source'             => get_template_directory() . '/library/plugins/wp-migrate-db-pro-media-files.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '1.4.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
@@ -140,25 +140,6 @@ function DANDO_register_required_plugins() {
 		// 	'slug'      => 'adminbar-link-comments-to-pending',
 		// 	'source'    => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip',
 		// ),
-
-		array(
-			'name' 					=> 'Advanced Custom Fields: Post Type Selector',
-			'slug' 					=> 'acf-post-type-selector',
-			'source' 				=> 'https://github.com/TimPerry/acf-post-type-selector/archive/master.zip',
-			'required' 				=> true,
-			'force_activation'		=> false,
-			'force_deactivation' 	=> true,
-			'is_callable'			=> 'acf_field',
-		),
-		array(
-			'name' 					=> 'Advanced Custom Fields: Widget Area',
-			'slug' 					=> 'acf-widget-arear',
-			'source' 				=> 'https://github.com/dustyf/acf-widget-area/archive/master.zip',
-			'required' 				=> true,
-			'force_activation'		=> false,
-			'force_deactivation' 	=> true,
-			'is_callable'			=> 'acf_field',
-		),
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		// array(
@@ -204,6 +185,12 @@ function DANDO_register_required_plugins() {
 			'force_activation'	=> false
 		),
 		array(
+			'name' 				=> 'Capability Manager Enhanced',
+			'slug' 				=> 'capability-manager-enhanced',
+			'required' 			=> false,
+			'force_activation'	=> false
+		),
+		array(
 			'name' 				=> 'Disable Comments',
 			'slug' 				=> 'disable-comments',
 			'required' 			=> false,
@@ -245,12 +232,12 @@ function DANDO_register_required_plugins() {
 			'required' 			=> true,
 			'force_activation'	=> false
 		),
-		// array(
-		// 	'name' 				=> 'Media File Renamer',
-		// 	'slug' 				=> 'media-file-renamer',
-		// 	'required' 			=> false,
-		// 	'force_activation'	=> false
-		// ),
+		array(
+			'name' 				=> 'Media File Renamer',
+			'slug' 				=> 'media-file-renamer',
+			'required' 			=> false,
+			'force_activation'	=> false
+		),
 		array(
 			'name' 				=> 'Quick Featured Images',
 			'slug' 				=> 'quick-featured-images',
@@ -324,6 +311,12 @@ function DANDO_register_required_plugins() {
 			'force_activation'	=> false
 		),
 		array(
+			'name' 				=> 'WordPress Infinite Scroll – Ajax Load More',
+			'slug' 				=> 'ajax-load-more',
+			'required' 			=> false,
+			'force_activation'	=> false
+		),
+		array(
 			'name' 				=> 'WP Inline Comment Errors',
 			'slug' 				=> 'wp-inline-comment-errors',
 			'required' 			=> false,
@@ -355,11 +348,19 @@ function DANDO_register_required_plugins() {
 		// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
 		// recognize the plugin as being installed.
 
+		// * * ACF Spesific plugins
+		// * More options available with the following suggestions:
+		// https://wordpress.org/plugins/advanced-custom-fields-table-field/
+		// https://en-au.wordpress.org/plugins/acf-focal-point/
+		// https://wordpress.org/plugins/acf-to-rest-api/
+		// https://github.com/reyhoun/acf-typography
+		// https://github.com/ractoon/acf-section-styles
+
 		array(
 			'name' 					=> 'Advanced Custom Fields: Advanced Taxonomy Selector',
 			'slug' 					=> 'acf-advanced-taxonomy-selector',
 			'required' 				=> true,
-			'force_activation'		=> false,
+			'force_activation'		=> true,
 			'force_deactivation' 	=> true,
 			'is_callable'			=> 'acf_field',
 		),
@@ -367,7 +368,7 @@ function DANDO_register_required_plugins() {
 			'name' 					=> 'Advanced Custom Fields: Gravityforms Add-on',
 			'slug' 					=> 'acf-gravityforms-add-on',
 			'required' 				=> true,
-			'force_activation'		=> false,
+			'force_activation'		=> true,
 			'force_deactivation' 	=> true,
 			'is_callable'			=> 'acf_field',
 		),
@@ -375,7 +376,7 @@ function DANDO_register_required_plugins() {
 			'name' 					=> 'Advanced Custom Fields: Image Crop Add-on',
 			'slug' 					=> 'acf-image-crop-add-on',
 			'required' 				=> true,
-			'force_activation'		=> false,
+			'force_activation'		=> true,
 			'force_deactivation' 	=> true,
 			'is_callable'			=> 'acf_field',
 		),
@@ -383,7 +384,15 @@ function DANDO_register_required_plugins() {
 			'name' 					=> 'Advanced Custom Fields: Limiter',
 			'slug' 					=> 'advanced-custom-fields-limiter-field',
 			'required' 				=> true,
-			'force_activation'		=> false,
+			'force_activation'		=> true,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
+		),
+		array(
+			'name' 					=> 'Advanced Custom Fields: Link Picker Field',
+			'slug' 					=> 'acf-link-picker-field',
+			'required' 				=> true,
+			'force_activation'		=> true,
 			'force_deactivation' 	=> true,
 			'is_callable'			=> 'acf_field',
 		),
@@ -391,10 +400,41 @@ function DANDO_register_required_plugins() {
 			'name' 					=> 'Advanced Custom Fields: Menu Field',
 			'slug' 					=> 'menu-field-for-advanced-custom-fields',
 			'required' 				=> true,
-			'force_activation'		=> false,
+			'force_activation'		=> true,
 			'force_deactivation' 	=> true,
 			'is_callable'			=> 'acf_field',
 		),
+
+		array(
+			'name' 					=> 'Advanced Custom Fields: Post Type Selector',
+			'slug' 					=> 'acf-post-type-selector',
+			'source' 				=> 'https://github.com/TimPerry/acf-post-type-selector/archive/master.zip',
+			'required' 				=> true,
+			'force_activation'		=> true,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
+		),
+		array(
+			'name' 					=> 'Advanced Custom Fields: Widget Area',
+			'slug' 					=> 'acf-widget-arear',
+			'source' 				=> 'https://github.com/dustyf/acf-widget-area/archive/master.zip',
+			'required' 				=> true,
+			'force_activation'		=> true,
+			'force_deactivation' 	=> true,
+			'is_callable'			=> 'acf_field',
+		),
+		// array(
+		// 	'name' 					=> 'ACF Section Styles Field',
+		// 	'slug' 					=> 'acf-section-styles',
+		// 	'source' 				=> 'https://github.com/ractoon/acf-section-styles/archive/master.zip',
+		// 	'required' 				=> true,
+		// 	'force_activation'		=> false,
+		// 	'force_deactivation' 	=> true,
+		// 	'is_callable'			=> 'acf_field',
+		// ),
+
+		// * Yoast SEO Spesific plugins
+
 		array(
 			'name'				=> 'WordPress SEO by Yoast',
 			'slug'				=> 'wordpress-seo',

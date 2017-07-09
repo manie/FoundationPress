@@ -11,20 +11,28 @@
 		);
 
 		// Add Module Options to $post_class_array based on options
-		if ( get_sub_field('dcf_module_opt_grid') ) { $post_class_array[] = get_sub_field('dcf_module_opt_grid'); }
-		if ( get_sub_field('dcf_module_opt_columns') ) { $post_class_array[] = get_sub_field('dcf_module_opt_columns'); }
-		if ( get_sub_field('dcf_module_opt_2_ratio') ) { $post_class_array[] = get_sub_field('dcf_module_opt_2_ratio'); }
-		if ( get_sub_field('dcf_module_opt_margin') ) { $post_class_array[] = 'margin'; }
+		if ( get_sub_field('dcf_module_option_grid') ) { $post_class_array[] = get_sub_field('dcf_module_option_grid'); }
+		if ( get_sub_field('dcf_module_option_columns') ) { $post_class_array[] = get_sub_field('dcf_module_option_columns');
+		if ( get_sub_field('dcf_module_option_ratio') ) { $post_class_array[] = get_sub_field('dcf_module_option_ratio'); }}
+		if ( get_sub_field('dcf_module_option_float') ) { $post_class_array[] = get_sub_field('dcf_module_option_float'); }
+		if ( get_sub_field('dcf_module_option_margin') ) {
+			$module_option_margin = get_sub_field('dcf_module_option_margin');
+			$post_class_array = array_merge($post_class_array, $module_option_margin);
+		}
 		if ( get_sub_field('dcf_module_design_bg_image') ) { $post_class_array[] = 'bgimg'; }
 
 		// Turn the post_class_array into a string if required
 		// $post_class_string = implode(" ", $post_class_array);
 
 	// Module Content - Text string with no fallback
-		if ( get_sub_field('dcf_module_title') ) { $module_title = get_sub_field('dcf_module_title'); } else { $module_title = null; }
-		if ( get_sub_field('dcf_module_introduction') ) { $module_introduction = get_sub_field('dcf_module_introduction'); } else { $module_title = null; }
+		if ( get_sub_field('dcf_module_title') ) {
+			$module_title = get_sub_field('dcf_module_title');
+		} else { $module_title = null; }
+		if ( get_sub_field('dcf_module_introduction') ) {
+			$module_introduction = get_sub_field('dcf_module_introduction');
+		} else { $module_introduction = null; }
 
-	// Module Design - CSS colour & background
+	// Module Design - CSS colour & background fo INLINE style
 		if ( get_sub_field('dcf_module_design_bg_colour') ) { $module_bg_colour = get_sub_field('dcf_module_design_bg_colour'); }
 		if ( get_sub_field('dcf_module_design_bg_image') ) { $module_bg_image = get_sub_field('dcf_module_design_bg_image'); }
 

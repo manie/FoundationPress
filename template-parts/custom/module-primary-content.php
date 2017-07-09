@@ -6,14 +6,17 @@
 		include(locate_template('template-parts/custom/VARS-modules.php'));
 
 	// Content Module
-		$module_label = "Primary Content";
+		$module_label = get_the_title();
 		$module_name = get_row_layout();
 
-	// Extra class for panel content
-		// $content_class = '';
-
 	// Add to default post class array
-		// $post_class_array[] = '';
+		$post_class_array[] = 'main-content';
+
+	// Extra class for panel content
+		$content_class = 'entry-content';
+
+	// Override default module label with custom text
+		if ( isset($module_title) && ( !empty($module_title) ) ) { $module_label = $module_title; }
 
 	// WP default vars
 		$tag = get_the_tags();
@@ -33,7 +36,7 @@
 			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 
 			<?php if (!empty_content($post->post_content)) { ?>
-				<div class="entry-content">
+				<div class="<?php echo $content_class; ?>">
 					<?php the_content(); ?>
 				</div>
 			<?php } ?>

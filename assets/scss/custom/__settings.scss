@@ -49,3 +49,11 @@ $tertiary-color-set: (
 
 $header-height: 45px;
 $content-max-width: 900px;
+
+/// Defatul bottom margin of modules
+/// @type List
+$panel-margin: 0; // rem-calc(20 10);
+
+/// Extra bottom/top margin for modules
+/// @type Number
+$extra-margin: rem-calc(15);

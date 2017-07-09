@@ -72,7 +72,7 @@
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
-            "delay": 0
+            "delay": 1
         },
         {
             "key": "field_595f1d340fb59",
@@ -296,5 +296,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499429706
+    "modified": 1499577898
 }

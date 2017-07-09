@@ -1,31 +1,8 @@
-/// Default bottom/top margin of the panel
-/// @type List
-$module-margin: rem-calc(20);
-
 #page-flexible-content {
 
-	.main-content,
-	.flexible-content {
+	.flexible-content {}
 
-		&.grid {
-			@include grid-row();
-		}
-
-		&.full {
-			margin-left: 0;
-			margin-right: 0;
-			width: 100%;
-
-			header, footer,
-			.entry-content, .panel-content {
-				max-width: $global-width;
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
-
-		&.margin {
-			margin-top: $module-margin;
-		}
+	.main-content {
+		@extend .flexible-content !optional;
 	}
 }

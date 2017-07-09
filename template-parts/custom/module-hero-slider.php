@@ -7,12 +7,15 @@
 		$module_label = "Hero Slider";
 		$module_name = get_row_layout();
 
-	// Extra class for panel content
-		$content_class = 'orbit-container';
-
 	// Add to default post class array
 		$post_class_array[] = 'hero-slider';
 		$post_class_array[] = 'orbit';
+
+	// Extra class for panel content
+		$content_class = 'orbit-container';
+
+	// Override default module label with custom text
+		if ( isset($module_title) && ( !empty($module_title) ) ) { $module_label = $module_title; }
 
 	// Custom Content variables
 		$default_post_type = 'sliders';

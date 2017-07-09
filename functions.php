@@ -51,7 +51,9 @@ require_once( 'library/responsive-images.php' );
 require_once( 'library/CUSTOM-overrides.php' );
 require_once( 'library/CUSTOM-functions.php' );
 require_once( 'library/CUSTOM-require-plugins.php' );
+require_once( 'library/CUSTOM-users.php' );
 require_once( 'library/CUSTOM-menus.php' );
+require_once( 'library/CUSTOM-shortcodes.php' );
 require_once( 'library/CUSTOM-theme-content.php' );
 
 /** CUSTOM POST TYPES */

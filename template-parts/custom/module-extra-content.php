@@ -7,11 +7,14 @@
 		$module_label = "Extra Content";
 		$module_name = get_row_layout();
 
-	// Extra class for panel content
-		$content_class = '';
-
 	// Add to default post class array
 		// $post_class_array[] = 'posts-panel';
+
+	// Extra class for panel content
+		$content_class = 'content';
+
+	// Override default module label with custom text
+		if ( isset($module_title) && ( !empty($module_title) ) ) { $module_label = $module_title; }
 
 	// Custom Content variables
 		if ( get_sub_field('dcf_extra_content_editor') ) { $extra_content = get_sub_field('dcf_extra_content_editor'); }
