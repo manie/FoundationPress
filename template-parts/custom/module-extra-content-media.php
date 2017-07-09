@@ -51,32 +51,104 @@
 						</div>
 					<?php } ?>
 
-					<?php if ( isset($extra_media_image) && ( !empty($extra_media_image) ) ) { ?>
-						<div class="extra-media <?php echo $extra_media_type; ?>">
-							<?php
-								if( !empty($extra_media_image) ) {
+					<?php if ( $extra_media_type == 'image') { ?>
 
-									// Image vars
-									$image_id = $extra_media_image['id'];
-									$image_url = $extra_media_image['url'];
+						<?php if ( isset($extra_media_image) && ( !empty($extra_media_image) ) ) { ?>
+							<div class="extra-media <?php echo $extra_media_type; ?>">
+								<?php
+									if( !empty($extra_media_image) ) {
 
-									// Get WP responsive markup
-									$responsive_image = wp_get_attachment_image( $image_id, 'full', false, array( 'class' => '' ) );
-									$responsive_image_src = wp_get_attachment_image_url( $image_id, 'full' );
-								}
+										// Image vars
+										$image_id = $extra_media_image['id'];
+										$image_url = $extra_media_image['url'];
 
-								if ( isset($responsive_image) ) { echo apply_filters( 'the_content', $responsive_image ); }
+										// Get WP responsive markup
+										$responsive_image = wp_get_attachment_image( $image_id, 'full', false, array( 'class' => '' ) );
+										$responsive_image_src = wp_get_attachment_image_url( $image_id, 'full' );
+									}
 
+									if ( isset($responsive_image) ) { echo apply_filters( 'the_content', $responsive_image ); }
+
+								?>
+							</div>
+						<?php } ?>
+
+					<?php } elseif ( $extra_media_type == 'video') { ?>
+
+						<?php if ( isset($extra_media_video) && ( !empty($extra_media_video) ) ) { ?>
+							<div class="extra-media <?php echo $extra_media_type; ?>"><?php echo $extra_media_video; ?></div>
+						<?php } ?>
+
+					<?php } elseif ( $extra_media_type == 'slider') { ?>
+
+						<?php if ( isset($extra_media_slider) && ( !empty($extra_media_slider) ) ) { ?>
+							<div class="extra-media s<?php echo $extra_media_type; ?>">
+							<?php //echo $extra_media_slider; ?>
+
+							<?php if( $extra_media_slider ):
+								$count = count( $extra_media_slider );
+								$i = 0;
 							?>
-						</div>
-					<?php } ?>
+								<article aria-label="Image Slider" role="region" data-count="<?php echo $count; ?>" data-orbit class="content-slider">
 
-					<?php if ( isset($extra_media_video) && ( !empty($extra_media_video) ) ) { ?>
-						<div class="extra-media <?php echo $extra_media_type; ?>"><?php echo $extra_media_video; ?></div>
-					<?php } ?>
+									<ul class="orbit inlinelist">
 
-					<?php if ( isset($extra_media_slider) && ( !empty($extra_media_slider) ) ) { ?>
-						<div class="extra-media s<?php echo $extra_media_type; ?>"><?php echo $extra_media_slider; ?></div>
+										<?php if ( $count > 1 ) { ?>
+											<button class="orbit-previous">
+												<span class="show-for-sr">Previous Slide</span>
+												<span class="nav fa fa-chevron-left fa-3x"></span>
+											</button>
+											<button class="orbit-next">
+												<span class="show-for-sr">Next Slide</span>
+												<span class="nav fa fa-chevron-right fa-3x"></span>
+											</button>
+										<?php } ?>
+
+										<?php foreach( $extra_media_slider as $image ): ?>
+
+											<?php
+												// ACF galery fields
+												// $image = $image['url'];
+												// $caption = $image['caption'];
+
+												if( !empty($image) ) {
+
+													// Image vars
+													$image_id = $image['id'];
+													$image_url = $image['url'];
+
+													// Get WP responsive markup
+													$responsive_image = wp_get_attachment_image( $image_id, 'full', false, array( 'class' => 'orbit-image' ) );
+													$responsive_image_src = wp_get_attachment_image_url( $image_id, 'full' );
+												}
+
+												// Increment count for active class
+												$i++;
+											?>
+
+											<li class="orbit-slide <?php if ( isset($active) ) { echo $active; } ?>" <?php if ( isset($responsive_image_src) ) { echo 'style="background-image: url(\''.$responsive_image_src.'\')'; } ?>">
+
+												<?php if ( isset($responsive_image) ) { echo apply_filters( 'the_content', $responsive_image ); } ?>
+												<?php if ( isset($caption) ) { ?>
+													<figcaption class="orbit-caption">
+														<h1><?php echo $caption; ?></h1>
+														<?php if ( $link_type == 'button' && !empty($link_url) ) { ?>
+															<a href="<?php echo $link_url; ?>" class="button"><?php if (!empty($link_text)) { echo $link_text; } else { echo 'Find our more'; } ?></a>
+														<?php } ?>
+													</figcaption>
+												<?php } ?>
+
+											</li>
+
+										<?php endforeach; ?>
+									</ul>
+
+								</article>
+
+							<?php endif; ?>
+							</div>
+						<?php } ?>
+
 					<?php } ?>
 				</section>
 			</div>

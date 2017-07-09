@@ -2,11 +2,10 @@
 /// @type Number
 $module-max-height: rem-calc(600) !default;
 
-.hero-slider {
+.content-slider {
 
-	&.grid {
-		padding-left: 0 !important;
-		padding-right: 0 !important;
+	.orbit {
+		margin-bottom: 0;
 	}
 
 	.orbit-slide, .orbit-image, .orbit-overlay {
@@ -16,7 +15,7 @@ $module-max-height: rem-calc(600) !default;
 	.orbit-slide {
 		background-position: center center;
 		background-repeat: no-repeat;
-		background-attachment: fixed;
+		background-attachment: scroll;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
