@@ -1,0 +1,24 @@
+/// Default page header height
+/// @type Number
+$hero-height: 50vh;
+
+.page-header {
+
+	height: $hero-height;
+	max-width: $global-width;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+
+	.hero-content {
+
+		width: 100%;
+
+		.heading {
+			font-size: rem-calc(52);
+		}
+
+		@include vertical-center;
+	}
+
+}

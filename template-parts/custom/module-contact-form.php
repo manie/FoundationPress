@@ -40,7 +40,7 @@
 
 		<?php if ( isset($form_selection) && ( !empty($form_selection) ) ) { ?>
 			<div class="panel-content">
-				<section class="<?php echo $content_class; ?>">
+				<section class="section <?php echo $content_class; ?>">
 					<?php
 
 						// Gravity form ID to be used

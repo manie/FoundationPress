@@ -4,7 +4,7 @@ Template Name: Flexible Content
 */
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
+<?php get_template_part( 'template-parts/custom/HERO-HEADER' ); ?>
 
 <div id="page-flexible-content" role="main">
 

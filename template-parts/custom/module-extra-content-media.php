@@ -43,7 +43,7 @@
 
 		<?php if ( isset($extra_content) || isset($extra_media_image) || isset($extra_media_video) || isset($extra_media_slider) ) { ?>
 			<div class="panel-content">
-				<section class="<?php echo $content_class; ?>">
+				<section class="section <?php echo $content_class; ?>">
 
 					<?php if ( isset($extra_content) && ( !empty($extra_content) ) ) { ?>
 						<div class="extra-content">
@@ -150,6 +150,7 @@
 						<?php } ?>
 
 					<?php } ?>
+
 				</section>
 			</div>
 		<?php } ?>

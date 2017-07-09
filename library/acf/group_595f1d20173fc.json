@@ -92,7 +92,7 @@
         },
         {
             "key": "field_595f1d3e0fb5a",
-            "label": "Extra Media Type",
+            "label": "Media Type",
             "name": "dcf_extra_media_type",
             "type": "radio",
             "instructions": "",
@@ -117,7 +117,7 @@
         },
         {
             "key": "field_595f23a5c1c8d",
-            "label": "Extra Media Image",
+            "label": "Media Image",
             "name": "dcf_extra_media_image",
             "type": "image_crop",
             "instructions": "",
@@ -149,7 +149,7 @@
         },
         {
             "key": "field_595f2408c1c8e",
-            "label": "Extra Media Video",
+            "label": "Media Video",
             "name": "dcf_extra_media_video",
             "type": "oembed",
             "instructions": "",
@@ -173,7 +173,7 @@
         },
         {
             "key": "field_595f2426c1c8f",
-            "label": "Extra Media Slider",
+            "label": "Media Slider",
             "name": "dcf_extra_media_slider",
             "type": "gallery",
             "instructions": "",
@@ -296,5 +296,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499577898
+    "modified": 1499597421
 }

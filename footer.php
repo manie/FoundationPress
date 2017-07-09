@@ -8,11 +8,13 @@
  * @since FoundationPress 1.0.0
  */
 
+if (is_active_sidebar( 'footer-widgets' )) { echo 'here'; };
+
 ?>
 
 		</section>
 		<div id="footer-container">
-			<?php if( function_exists('is_sidebar_active') && is_sidebar_active( 'footer-widgets' ) ): ?>
+			<?php if( function_exists('is_sidebar_active') && is_sidebar_active( 'footer-widgets' ) && is_active_sidebar( 'footer-widgets' ) ): ?>
 				<footer id="footer">
 					<?php do_action( 'foundationpress_before_footer' ); ?>
 					<?php dynamic_sidebar( 'footer-widgets' ); ?>

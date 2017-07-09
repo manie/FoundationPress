@@ -39,7 +39,7 @@
 
 		<?php if ( isset($menu_selection) && ( !empty($menu_selection) ) ) { ?>
 			<div class="panel-content">
-				<section class="<?php echo $content_class; ?>">
+				<section class="section <?php echo $content_class; ?>">
 					<?php
 						wp_nav_menu( array(
 							'menu' 			=> $menu_selection,

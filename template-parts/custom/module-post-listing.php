@@ -103,7 +103,7 @@
 
 		<?php while ( $query->have_posts() ) { $query->the_post(); ?>
 			<div class="panel-content">
-				<section class="<?php echo $content_class; ?>">
+				<section class="section <?php echo $content_class; ?>">
 					<?php
 						// Increment count for active class
 						$i++;

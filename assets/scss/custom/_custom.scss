@@ -15,17 +15,13 @@ section.container {
 
 	@include breakpoint(small) {
 		.main-content {
-			padding-left: rem-calc(15);
-			padding-right: rem-calc(15);
-			padding-bottom: rem-calc(15);
+			padding: rem-calc(10);
 		}
 	}
 
 	@include breakpoint(medium) {
 		.main-content {
-			padding-left: rem-calc(15);
-			padding-right: rem-calc(15);
-			padding-bottom: rem-calc(15);
+			padding: rem-calc(15);
 		}
 	}
 }

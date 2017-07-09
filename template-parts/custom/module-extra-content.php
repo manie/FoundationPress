@@ -39,7 +39,7 @@
 
 		<?php if ( isset($extra_content) && ( !empty($extra_content) ) ) { ?>
 			<div class="panel-content">
-				<section class="<?php echo $content_class; ?>">
+				<section class="section <?php echo $content_class; ?>">
 					<?php
 						// Apply WP content filter
 						echo apply_filters('the_content', $extra_content);

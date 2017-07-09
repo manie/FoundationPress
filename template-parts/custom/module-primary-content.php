@@ -6,7 +6,7 @@
 		include(locate_template('template-parts/custom/VARS-modules.php'));
 
 	// Content Module
-		$module_label = get_the_title();
+		$module_title = get_the_title();
 		$module_name = get_row_layout();
 
 	// Add to default post class array
@@ -27,7 +27,7 @@
 
 		<article aria-label="<?php echo $module_label; ?>" data-module="<?php echo $module_name; ?>" <?php post_class($post_class_array); ?> <?php if ( isset($module_design_style) ) { echo $module_design_style; } ?>>
 
-			<?php if ( !is_front_page() && !is_home() ) { ?>
+			<?php if ( !is_front_page() && !is_home() && ( get_field('dcf_header_option') == 'none' ) ) { ?>
 				<header>
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 				</header>
@@ -36,7 +36,7 @@
 			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 
 			<?php if (!empty_content($post->post_content)) { ?>
-				<div class="<?php echo $content_class; ?>">
+				<div class="section <?php echo $content_class; ?>">
 					<?php the_content(); ?>
 				</div>
 			<?php } ?>

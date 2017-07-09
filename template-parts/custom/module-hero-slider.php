@@ -91,7 +91,7 @@
 
 	<article aria-label="<?php echo $module_label; ?>" data-module="<?php echo $module_name; ?>" role="region" data-count="<?php echo $count; ?>" data-orbit <?php post_class($post_class_array); ?> <?php if ( isset($module_design_style) ) { echo $module_design_style; } ?>>
 
-		<ul class="<?php echo $content_class; ?>">
+		<ul class="section <?php echo $content_class; ?>">
 
 			<?php if ( $count > 1 ) { ?>
 				<button class="orbit-previous">
