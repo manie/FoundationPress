@@ -23,7 +23,7 @@
 				<?php } ?>
 
 				<?php if ( isset($content_description) && ( !empty($content_description) ) ) { ?>
-					<p class="subheading"><?php echo $content_description; ?></p>
+					<p class="description"><?php echo $content_description; ?></p>
 				<?php } ?>
 			</div>
 

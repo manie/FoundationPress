@@ -7,13 +7,13 @@
 
 			get_template_part( 'template-parts/custom/header' );
 
-		elseif ( get_field('dcf_header_option') == 'image' ):
+		// elseif ( get_field('dcf_header_option') == 'image' ):
 
-			get_template_part( 'template-parts/custom/header', 'image' );
+			// get_template_part( 'template-parts/custom/header', 'image' );
 
-		elseif ( get_field('dcf_header_option') == 'video' ):
+		else :
 
-			get_template_part( 'template-parts/custom/header', 'video' );
+			get_template_part( 'template-parts/custom/header', 'all' );
 
 		endif;
 
