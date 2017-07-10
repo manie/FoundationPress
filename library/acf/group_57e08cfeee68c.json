@@ -93,7 +93,7 @@
             "target_size": "featured-large",
             "width": "",
             "height": "",
-            "preview_size": "featured-small",
+            "preview_size": "featured-medium",
             "force_crop": "no",
             "save_in_media_library": "no",
             "retina_mode": "yes",
@@ -134,7 +134,7 @@
             "label": "Hero video",
             "name": "dcf_header_hero_video",
             "type": "oembed",
-            "instructions": "This video is used for the hero background on top if the hero image. Please be considerate with the choice as the video will auto play (ie, no sound recommended).",
+            "instructions": "Please be considerate with the background video choice as the video will autoplay (ie, no sound recommended).",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -749,5 +749,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1499601650
+    "modified": 1499647537
 }

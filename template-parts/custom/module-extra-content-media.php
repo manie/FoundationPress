@@ -76,7 +76,9 @@
 					<?php } elseif ( $extra_media_type == 'video') { ?>
 
 						<?php if ( isset($extra_media_video) && ( !empty($extra_media_video) ) ) { ?>
-							<div class="extra-media <?php echo $extra_media_type; ?>"><?php echo $extra_media_video; ?></div>
+							<div class="extra-media <?php echo $extra_media_type; ?>">
+								<div class="responsive-embed"><?php echo $extra_media_video; ?></div>
+							</div>
 						<?php } ?>
 
 					<?php } elseif ( $extra_media_type == 'slider') { ?>

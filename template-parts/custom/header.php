@@ -14,15 +14,17 @@
 		<header class="page-header <?php echo $header_option; ?>">
 
 			<div class="hero-content">
-
-				<?php if ( $header_option == 'default') { ?>
-					<?php if ( isset($content_heading) && ( !empty($content_heading) ) ) { ?>
-						<h1 class="heading"><?php echo $content_heading; ?></h1>
-					<?php } ?>
-				<?php } elseif ( $header_option == 'image') { ?>
-
+				<?php if ( isset($content_heading) && ( !empty($content_heading) ) ) { ?>
+					<h1 class="heading"><?php echo $content_heading; ?></h1>
 				<?php } ?>
 
+				<?php if ( isset($content_subheading) && ( !empty($content_subheading) ) ) { ?>
+					<h2 class="subheading"><?php echo $content_subheading; ?></h2>
+				<?php } ?>
+
+				<?php if ( isset($content_description) && ( !empty($content_description) ) ) { ?>
+					<p class="subheading"><?php echo $content_description; ?></p>
+				<?php } ?>
 			</div>
 
 		</header>

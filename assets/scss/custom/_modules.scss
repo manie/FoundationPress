@@ -116,6 +116,20 @@ $panel-header-font-size: rem-calc(26) !default;
 			.extra-content { float: right; }
 			.extra-media { float: left; }
 		}
+
+		@include breakpoint(small only) {
+			.extra-content { width: 100% !important; }
+			.extra-media { width: 100% !important; }
+
+			.extra-content + .extra-media {
+				padding-top: rem-calc(15);
+			}
+		}
+
+		@include breakpoint(medium only){
+			.extra-content { width: 50% !important; }
+			.extra-media { width: 50% !important; }
+		}
 	}
 
 	&.bgimg {

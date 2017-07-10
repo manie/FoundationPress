@@ -7,34 +7,24 @@
 		$content_class = 'content';
 
 	// Custom content vars
-		$image = get_field('dcf_header_hero_image');
+		$video = get_field('dcf_header_hero_video');
+		if( !empty($video) ) {
+			$video_url = get_field('dcf_header_hero_video', false, false);
+		}
 
-		if( !empty($image) ) {
-
-			// ACF Image vars
-			$image_id = $image['id'];
-			$image_url = $image['url'];
-
-			// Get WP responsive markup
-			$responsive_image = wp_get_attachment_image( $image_id, 'full', false, array( 'class' => 'orbit-image' ) );
-			$responsive_image_src = wp_get_attachment_image_url( $image_id, 'full' );
-
-			if ( isset($responsive_image_src) ) {
-				$header_style = 'style="background-image: url(' . $responsive_image_src . ')"';
-			}
-		} elseif (has_post_thumbnail()) {
-
+		if (has_post_thumbnail()) {
 			// get featured image
 			$image_size = 'large';
 			$featured_image_src = wp_get_attachment_url( get_post_thumbnail_id($post->ID), $image_size );
+
 			if ( isset($featured_image_src) ) {
 				$header_style = 'style="background-image: url(' . $featured_image_src . ')"';
 			}
 		}
 
-		if ( isset($header_style) && ( !empty($header_style) ) ) {
-			$has_media = 'has-img';
-		} else { $has_media = 'no-img'; }
+		if ( isset($video_url) && ( !empty($video_url) ) ) {
+			$has_media = 'has-video';
+		} else { $has_media = 'no-video'; }
 
 ?>
 
@@ -57,9 +47,10 @@
 				<?php } ?>
 			</div>
 
-			<?php if ( isset($header_style) && ( !empty($header_style) ) ) { ?>
-				<div class="hero-media">
-					<span class="bgimg" <?php echo $header_style; ?>></span>
+			<?php if ( isset($video_url) && ( !empty($video_url) ) ) { ?>
+				<div class="hero-media" <?php echo $header_style; ?>>
+					<div id="bgndVideo" class="player" data-property="{videoURL: '<?php echo $video_url; ?>', mobileFallbackImage: '<?php if (has_post_thumbnail()) { echo $featured_image_src; } ?>', autoPlay: true, showControls: true, optimizeDisplay: true, quality: 'default', mute: true, loop: true, remember_last_time: true, stopMovieOnBlur: false, containment: 'self' }"></div>
+					<script> jQuery(function(){ jQuery("#bgndVideo").YTPlayer(); }); </script>
 				</div>
 			<?php } ?>
 

@@ -1,6 +1,8 @@
 /// Default page header height
 /// @type Number
-$hero-height: 50vh;
+$hero-height: 40vh;
+$hero-height-medium: 60vh;
+$hero-height-small: 100vh;
 
 .page-header {
 
@@ -9,16 +11,65 @@ $hero-height: 50vh;
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
+	z-index: 0;
 
 	.hero-content {
 
+		background-color: transparent;
+		padding: rem-calc(0 15);
+		position: relative;
 		width: 100%;
+		z-index: 3;
 
 		.heading {
 			font-size: rem-calc(52);
 		}
 
+		&.has-img {
+			color: $white;
+		}
+
+		&.has-video {
+			color: $white;
+		}
+
 		@include vertical-center;
+	}
+
+	.hero-media {
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+
+		@include bg-cover;
+	}
+
+	.bgimg {
+		display: block;
+		height: 100%;
+		width: 100%;
+		@include bg-cover;
+	}
+
+	#bgndVideo {
+		height: 100%;
+		width: 100%;
+
+		.mb_YTPBar .buttonBar { display: none; }
+	}
+
+	&.image {}
+	&.video {
+		background-color: $black;
+	}
+
+	@include breakpoint(small only){
+		height: $hero-height-small;
+		height: calc(#{$hero-height-small} - #{$header-height});
+	}
+
+	@include breakpoint(medium only){
+		height: $hero-height-medium;
+		height: calc(#{$hero-height-medium} - #{$header-height});
 	}
 
 }

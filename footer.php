@@ -8,14 +8,16 @@
  * @since FoundationPress 1.0.0
  */
 
-if (is_active_sidebar( 'footer-widgets' )) { echo 'here'; };
-
 ?>
 
 		</section>
 		<div id="footer-container">
 			<?php if( function_exists('is_sidebar_active') && is_sidebar_active( 'footer-widgets' ) && is_active_sidebar( 'footer-widgets' ) ): ?>
-				<footer id="footer">
+				<?php
+					$the_sidebars = wp_get_sidebars_widgets();
+					$the_sidebars_count = count( $the_sidebars['footer-widgets'] );
+				?>
+				<footer id="footer" data-count="<?php echo $the_sidebars_count; ?>">
 					<?php do_action( 'foundationpress_before_footer' ); ?>
 					<?php dynamic_sidebar( 'footer-widgets' ); ?>
 					<?php do_action( 'foundationpress_after_footer' ); ?>

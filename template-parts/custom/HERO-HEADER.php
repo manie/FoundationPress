@@ -11,10 +11,9 @@
 
 			get_template_part( 'template-parts/custom/header', 'image' );
 
-		else :
+		elseif ( get_field('dcf_header_option') == 'video' ):
 
-			// none selected
-			get_template_part( 'template-parts/custom/header', 'none' );
+			get_template_part( 'template-parts/custom/header', 'video' );
 
 		endif;
 
