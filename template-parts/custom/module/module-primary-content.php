@@ -23,7 +23,7 @@
 
 	?>
 
-	<?php if (!empty_content($post->post_content)) { ?>
+	<?php if ( !empty_content($post->post_content) && !$disable_mobile ) { ?>
 
 		<article aria-label="<?php echo $module_label; ?>" data-module="<?php echo $module_name; ?>" <?php post_class($post_class_array); ?> <?php if ( isset($module_design_style) ) { echo $module_design_style; } ?>>
 

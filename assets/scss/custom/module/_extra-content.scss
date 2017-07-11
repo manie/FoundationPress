@@ -11,4 +11,13 @@
 	.orbit-container {
 		max-height: 500px;
 	}
+
+	.responsive-embed {
+		margin-bottom: 0;
+
+		@include breakpoint(small only){
+			// Remove video padding ratio
+			.responsive-embed { padding-bottom: 75%; }
+		}
+	}
 }

@@ -46,4 +46,17 @@
 			$module_design_style = 'style="background-image: url(' . $image_with_size_limit . ')"';
 		}
 
+
+	// Mobile Detect
+
+		// Include and instantiate the class.
+		require_once get_template_directory() . '/library/Mobile_Detect.php';
+		$detect = new Mobile_Detect;
+
+		if ( get_sub_field('dcf_module_option_disable_mobile') ) {
+			if( $detect->isMobile() && !$detect->isTablet() ){
+ 				$disable_mobile = true;
+			} else { $disable_mobile = false; }
+		} else { $disable_mobile = false; }
+
 ?>
