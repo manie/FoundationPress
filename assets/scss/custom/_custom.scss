@@ -1,5 +1,5 @@
 /*
- * CUSTOM Global/Foundation overrides
+ * CUSTOM Global styles & Foundation overrides
  */
 
 // Typography
@@ -10,7 +10,7 @@ p:empty { margin-bottom: 0; }
 	}
 }
 
-// Global
+// Global Container
 section.container {
 
 	@include breakpoint(small) {

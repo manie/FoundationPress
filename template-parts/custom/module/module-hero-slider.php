@@ -126,8 +126,7 @@
 						$responsive_image_src = wp_get_attachment_image_url( $image_id, 'full' );
 					}
 
-					// Increment count for active class
-					$i++;
+					$i++; // Increment count for active class
 				?>
 
 				<li class="orbit-slide<?php if ( isset($active) ) { echo $active; } ?>" <?php if ( isset($responsive_image_src) ) { echo 'style="background-image: url(\''.$responsive_image_src.'\')'; } ?>">
@@ -136,7 +135,7 @@
 
 					<?php if ( isset($responsive_image) ) { echo apply_filters( 'the_content', $responsive_image ); } ?>
 					<?php if ( isset($caption) ) { ?>
-						<figcaption class="orbit-caption">
+						<figcaption class="orbit-caption <?php echo $overlay; ?>">
 							<h1><?php echo $caption; ?></h1>
 							<?php if ( $link_type == 'button' && !empty($link_url) ) { ?>
 								<a href="<?php echo $link_url; ?>" class="button"><?php if (!empty($link_text)) { echo $link_text; } else { echo 'Find our more'; } ?></a>

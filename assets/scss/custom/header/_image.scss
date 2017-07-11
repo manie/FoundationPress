@@ -1,0 +1,12 @@
+.page-header.image {
+
+	// Header Image
+
+	.bgimg {
+		display: block;
+		height: 100%;
+		width: 100%;
+		@include bg-cover;
+	}
+
+}

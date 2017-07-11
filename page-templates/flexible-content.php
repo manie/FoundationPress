@@ -1,10 +1,10 @@
 <?php
 /*
-Template Name: Flexible Content
+Template Name: FLEXIBLE CONTENT
 */
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/custom/HERO-HEADER' ); ?>
+<?php get_template_part( 'template-parts/custom/hero-header' ); ?>
 
 <div id="page-flexible-content" role="main">
 

@@ -32,8 +32,8 @@
 			$link_video = get_field('dcf_header_link_video');
 		}
 
-		if ( isset($link_type) && $link_type == 'text' ) { $link_class = 'text'; }
-		elseif ( isset($link_type) && $link_type == 'button' ) { $link_class = 'button'; }
+		if ( isset($link_type) && $link_type == 'text' && $link_enable ) { $link_class = 'text'; }
+		elseif ( isset($link_type) && $link_type == 'buttons' && $link_enable ) { $link_class = 'button'; }
 		else { $link_class = null; }
 
 	// Image vars
@@ -141,9 +141,9 @@
 			$contact_address_lng = $contact_address_map['lng'];
 		}
 
-		if ( isset($hero_map_details) && $hero_map_details ) {
+		if ( isset($hero_map_details) && $hero_map_details && $header_option == 'map' ) {
 			$details_class = "detail";
-		} else { $details_class = "none"; }
+		} else { $details_class = null; }
 
 		if ( isset($hero_map_static) ) {
 			$map_class = "acf-map-static";

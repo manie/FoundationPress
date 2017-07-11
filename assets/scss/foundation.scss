@@ -73,8 +73,8 @@
 @include motion-ui-animations;
 
 /*
-  My custom styles:
-  Add your scss files below to structure your project styles
+  FoundationPress styles:
+  Modify files as required. WARING: might affect theme updates
 */
 
 // Modules
@@ -97,25 +97,36 @@
 @import "templates/kitchen-sink";
 @import "templates/page-default";
 @import "templates/page-sidebar-left";
+@import "templates/page-sidebar-right";
 @import "templates/page-full-width";
 @import "templates/single-post";
+
+/*
+  DANDO: Custom styles:
+  Modify and add your own scss files below. Keep all new files in 'custom' folder.
+*/
 
 // Custom Mixins & Overrides
 @import "custom/_mixins";
 @import "custom/_custom";
 
 // Custom Plugins
-@import "custom/plugin-orbit-slider";
+@import "custom/plugin/orbit-slider";
 
 // Custom Headers
 @import "custom/headers";
+@import "custom/header/gallery";
+@import "custom/header/image";
+@import "custom/header/map";
+@import "custom/header/slider";
+@import "custom/header/video";
 
 // Custom Flexible Modules
 @import "custom/modules";
-@import "custom/module-post-listing";
-@import "custom/module-extra-content";
-@import "custom/module-hero-slider";
-@import "custom/module-content-slider";
+@import "custom/module/post-listing";
+@import "custom/module/extra-content";
+@import "custom/module/hero-slider";
+@import "custom/module/content-slider";
 
 // Custom Page Templates
-@import "custom/page-flexible-content";
+@import "custom/page/flexible-content";

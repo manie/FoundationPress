@@ -1,12 +1,12 @@
 <?php
 /*
-Template Name: Full Width
+Template Name: Sidebar Right
 */
 get_header(); ?>
 
 <?php get_template_part( 'template-parts/custom/hero-header' ); ?>
 
-<div id="page-full-width" role="main">
+<div id="page-sidebar-left" role="main">
 
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
@@ -37,6 +37,8 @@ get_header(); ?>
 	<?php endwhile;?>
 
 	<?php do_action( 'foundationpress_after_content' ); ?>
+
+	<?php get_sidebar(); ?>
 
 </div>
 

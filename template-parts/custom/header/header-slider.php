@@ -4,7 +4,7 @@
 		include(locate_template('template-parts/custom/VARS-header.php'));
 
 	// Extra class for panel content
-		// $content_class = 'content';
+		$content_class = 'header-slider';
 
 	// Custom Content variables
 		$default_post_type = 'sliders';
@@ -60,7 +60,7 @@
 ?>
 
 <?php if ( $query->have_posts() ) { ?>
-	<div aria-label="Hero Slider" class="orbit" role="region" data-count="<?php echo $count; ?>" data-orbit class="header-slider">
+	<div aria-label="Hero Slider" class="orbit" role="region" data-count="<?php echo $count; ?>" data-orbit class="<?php echo $content_class; ?>">
 
 		<ul class="orbit-container inlinelist">
 
@@ -107,7 +107,7 @@
 
 					<?php if ( isset($responsive_image) ) { echo apply_filters( 'the_content', $responsive_image ); } ?>
 					<?php if ( isset($caption) ) { ?>
-						<figcaption class="orbit-caption">
+						<figcaption class="orbit-caption <?php echo $overlay; ?>">
 							<h1><?php echo $caption; ?></h1>
 							<?php if ( isset($link_type) && $link_type == 'button' && !empty($link_url) ) { ?>
 								<a href="<?php echo $link_url; ?>" class="button"><?php if (!empty($link_text)) { echo $link_text; } else { echo 'Find our more'; } ?></a>
@@ -120,7 +120,6 @@
 				</li>
 			<?php } ?>
 		</ul>
-
 	</div>
 <?php } ?>
 

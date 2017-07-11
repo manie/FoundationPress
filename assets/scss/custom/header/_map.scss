@@ -1,0 +1,57 @@
+.page-header.map {
+
+	// Header Map
+
+	.hero-map {
+		height: $hero-height !important;
+
+		@include breakpoint(small only){
+			height: $hero-height-small;
+			height: calc(#{$hero-height-small} - #{$header-height});
+		}
+
+		@include breakpoint(medium only){
+			height: $hero-height-medium;
+			height: calc(#{$hero-height-medium} - #{$header-height});
+		}
+
+		@include bg-cover;
+	}
+	.contact-details {
+		background-color: $light-gray;
+		display: block;
+		max-width: 30rem;
+		min-width: 300px;
+		padding: rem-calc(30 40);
+		position: absolute;
+		top: 20%; right: 0;
+		text-align: left;
+		z-index: 3;
+
+		p:last-of-type { margin-bottom: 0; }
+
+		.address {
+			max-height: 100px;
+			overflow: hidden;
+			padding-left: rem-calc(30);
+
+			.fa {
+				display: block;
+				float: left;
+				margin-left: -(rem-calc(30));
+				margin-top: rem-calc(5);
+			}
+		}
+
+		.fa-fw { width: rem-calc(25);  }
+
+		@include vertical-center;
+	}
+
+	&.detail {
+		.hero-content  {
+			padding-right: 500px;
+		}
+	}
+
+}

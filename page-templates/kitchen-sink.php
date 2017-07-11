@@ -4,7 +4,6 @@ Template Name: Kitchen Sink
 */
 get_header(); ?>
 
-
 	<?php /* Start loop */ ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -956,4 +955,5 @@ get_header(); ?>
 		</div>
 
 	<?php endwhile; ?>
+
 <?php get_footer();

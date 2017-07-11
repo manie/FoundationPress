@@ -4,12 +4,12 @@
 		include(locate_template('template-parts/custom/VARS-header.php'));
 
 	// Extra class for panel content
-		// $content_class = 'content';
+		$content_class = 'hero-media';
 
 ?>
 
 <?php if ( isset($gallery) && isset($header_option) ) { ?>
-	<div class="hero-media">
+	<div class="<?php echo $content_class; ?>">
 		<?php if( $gallery ):
 			$count = count( $gallery );
 			$i = 0;
@@ -55,7 +55,7 @@
 
 							<?php if ( isset($responsive_image) ) { echo apply_filters( 'the_content', $responsive_image ); } ?>
 							<?php if ( isset($caption) ) { ?>
-								<figcaption class="orbit-caption">
+								<figcaption class="orbit-caption ">
 									<h1><?php echo $caption; ?></h1>
 									<?php if ( $link_type == 'button' && !empty($link_url) ) { ?>
 										<a href="<?php echo $link_url; ?>" class="button"><?php if (!empty($link_text)) { echo $link_text; } else { echo 'Find our more'; } ?></a>

@@ -49,6 +49,7 @@ require_once( 'library/responsive-images.php' );
 
 /*** CUSTOM ADDITIONS */
 require_once( 'library/CUSTOM-overrides.php' );
+require_once( 'library/CUSTOM-acf.php' );
 require_once( 'library/CUSTOM-functions.php' );
 require_once( 'library/CUSTOM-require-plugins.php' );
 require_once( 'library/CUSTOM-users.php' );

@@ -9,5 +9,5 @@
 ?>
 
 <nav class="vertical menu" id="mobile-menu" role="navigation">
-  <?php foundationpress_mobile_nav(); ?>
+	<?php foundationpress_mobile_nav(); ?>
 </nav>

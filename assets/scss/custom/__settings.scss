@@ -1,12 +1,14 @@
-//  Foundation for Sites Settings
+//  DANDO Custom Foundation
 //  -----------------------------
 //
 //  Table of Contents:
 //
 //   1. Colour Scheme
 //   2. Layout Sizes
+//   3. Foundation overrides
 
 
+// ---------
 // 1. Colour Scheme
 // ---------
 
@@ -51,6 +53,7 @@ $primary-color-dark: map-get($primary-color-set, dark);
 $primary-color-text: map-get($primary-color-set, text);
 $primary-color-border: map-get($primary-color-set, border);
 
+// ---------
 // 2. Layout Sizes
 // ---------
 
@@ -65,7 +68,15 @@ $panel-margin: 0; // rem-calc(20 10);
 /// @type Number
 $extra-margin: rem-calc(15);
 
-// 3. Other colour overrides
+/// Hero header sizes
+$hero-height: 70vh;
+$hero-height-medium: 50vh;
+$hero-height-small: 100vh;
+
+$module-max-height: rem-calc(600) !default;
+
+// ---------
+// 3. Foundation overrides
 // ---------
 
 $outer-space: $primary-color;

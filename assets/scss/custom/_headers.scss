@@ -1,105 +1,110 @@
-/// Default page header height
-/// @type Number
-$hero-height: 70vh;
-$hero-height-medium: 50vh;
-$hero-height-small: 100vh;
+/*
+ * CUSTOM Page Hero Header
+ */
 
 .page-header {
 
 	height: $hero-height;
+	height: calc(#{$hero-height} - #{$header-height});
+	max-height: $module-max-height;
+
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
 	z-index: 0;
 
-	.hero-content {
+	// Hero headings
+		.hero-content {
 
-		// background-color: none;
-		max-width: $global-width;
-		margin: 0 auto;
-		padding: rem-calc(0 15);
-		position: relative;
-		width: 100%;
-		z-index: 3;
+			// background-color: none;
+			max-width: $global-width;
+			margin: 0 auto;
+			padding: rem-calc(0 15);
+			position: relative;
+			width: 100%;
+			z-index: 3;
 
-		// for absolute
-		left: 0; right: 0;
+			// for absolute
+			left: 0; right: 0;
 
-		.heading {
-			font-size: rem-calc(52);
-			margin-bottom: 0;
+			.heading {
+				font-size: rem-calc(52);
+				margin-bottom: 0;
 
-			// + .subheading { margin-top: rem-calc(15); }
-			+ .links { margin-top: rem-calc(30); }
-			+ .video-popup { margin-top: rem-calc(30); }
-		}
-
-		.subheading {
-			margin-bottom: 0;
-			+ .description { margin-top: rem-calc(15); }
-			+ .links { margin-top: rem-calc(30); }
-			+ .video-popup { margin-top: rem-calc(30); }
-		}
-
-		.description {
-			margin-bottom: 0;
-			+ .links { margin-top: rem-calc(15); }
-			+ .video-popup { margin-top: rem-calc(30); }
-		}
-
-		.links {
-			margin-bottom: 0;
-
-			.link {
-				display: inline;
-				margin: rem-calc(0 5);
+				// + .subheading { margin-top: rem-calc(15); }
+				+ .links { margin-top: rem-calc(30); }
+				+ .video-popup { margin-top: rem-calc(30); }
 			}
+
+			.subheading {
+				margin-bottom: 0;
+				+ .description { margin-top: rem-calc(15); }
+				+ .links { margin-top: rem-calc(30); }
+				+ .video-popup { margin-top: rem-calc(15); }
+			}
+
+			.description {
+				margin-bottom: 0;
+				+ .links { margin-top: rem-calc(15); }
+				+ .video-popup { margin-top: rem-calc(30); }
+			}
+
+			.links {
+				margin-bottom: 0;
+
+				.link {
+					display: inline;
+					margin: rem-calc(0 5);
+				}
+			}
+
+			.video-popup {
+				display: inline-block;
+				color: $white;
+			}
+
+			&.has-img {
+				color: $white;
+			}
+
+			&.has-video {
+				color: $white;
+			}
+
+			@include vertical-center;
 		}
 
-		.video-popup {
-			display: inline-block;
-			color: $white;
+	// Hero image & video
+		.hero-media {
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+
+			@include bg-cover;
 		}
 
-		&.has-img {
-			color: $white;
+	// Additional border below
+		.hero-border {
+			background-color: $white;
+			bottom: rem-calc(30);
+			clear: both;
+			display: block;
+			height: rem-calc(30);
+			position: relative;
+
+			// border-image-source: url(border.svg);
+
+			@include clearfix;
 		}
 
-		&.has-video {
-			color: $white;
+	// Hero contact details
+		.hero-details {
+			max-width: $global-width;
+			margin: 0 auto;
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
 		}
 
-		@include vertical-center;
-	}
-
-	.hero-media {
-		position: absolute;
-		top: 0; right: 0; bottom: 0; left: 0;
-
-		@include bg-cover;
-	}
-
-	.hero-border {
-		background-color: $white;
-		bottom: rem-calc(30);
-		clear: both;
-		display: block;
-		height: rem-calc(30);
-		position: relative;
-
-		// border-image-source: url(border.svg);
-
-		@include clearfix;
-	}
-
-	.hero-details {
-		max-width: $global-width;
-		margin: 0 auto;
-		position: absolute;
-		top: 0; right: 0; bottom: 0; left: 0;
-	}
-
-	// Header Overlay
+	// Header overlay & colour settings
 		.hero-overlay {
 			background-color: rgba($black, .1);
 			position: absolute;
@@ -177,119 +182,6 @@ $hero-height-small: 100vh;
 			}
 		}
 
-	// Header Image
-		&.image {
-			.bgimg {
-				display: block;
-				height: 100%;
-				width: 100%;
-				@include bg-cover;
-			}
-		}
-
-	// Header Video
-		&.gallery {
-			#bgndVideo {
-				background-color: $black;
-				height: 100%;
-				width: 100%;
-
-				.mb_YTPBar .buttonBar { display: none; }
-			}
-		}
-
-	// Header Gallery
-		&.gallery {
-			.orbit-container {
-				height: $hero-height !important;
-
-				@include breakpoint(small only){
-					height: $hero-height-small;
-					height: calc(#{$hero-height-small} - #{$header-height});
-				}
-
-				@include breakpoint(medium only){
-					height: $hero-height-medium;
-					height: calc(#{$hero-height-medium} - #{$header-height});
-				}
-			}
-			.hero-content { color: $white; }
-		}
-
-	// Header Slider (from post tyoe)
-		&.slider {
-			.orbit-container,
-			.orbit-slide {
-				height: $hero-height !important;
-
-				@include breakpoint(small only){
-					height: $hero-height-small;
-					height: calc(#{$hero-height-small} - #{$header-height});
-				}
-
-				@include breakpoint(medium only){
-					height: $hero-height-medium;
-					height: calc(#{$hero-height-medium} - #{$header-height});
-				}
-			}
-			.hero-content { color: $white; }
-		}
-
-	// Header Map
-		&.map {
-			.hero-map {
-				height: $hero-height !important;
-
-				@include breakpoint(small only){
-					height: $hero-height-small;
-					height: calc(#{$hero-height-small} - #{$header-height});
-				}
-
-				@include breakpoint(medium only){
-					height: $hero-height-medium;
-					height: calc(#{$hero-height-medium} - #{$header-height});
-				}
-
-				@include bg-cover;
-			}
-			.contact-details {
-				background-color: $light-gray;
-				display: block;
-				max-width: 30rem;
-				min-width: 300px;
-				padding: rem-calc(30 40);
-				position: absolute;
-				top: 20%; right: 0;
-				text-align: left;
-				z-index: 3;
-
-				p:last-of-type { margin-bottom: 0; }
-
-				.address {
-					max-height: 100px;
-					overflow: hidden;
-					padding-left: rem-calc(30);
-
-					.fa {
-						display: block;
-						float: left;
-						margin-left: -(rem-calc(30));
-						margin-top: rem-calc(5);
-					}
-				}
-
-				.fa-fw { width: rem-calc(25);  }
-
-				@include vertical-center;
-			}
-
-			&[data-map="detail"] {
-				.hero-content  {
-					padding-right: 500px;
-				}
-			}
-		}
-
 	@include breakpoint(small only){
 		height: $hero-height-small;
 		height: calc(#{$hero-height-small} - #{$header-height});
@@ -304,10 +196,7 @@ $hero-height-small: 100vh;
 
 #video-popup-modal {
 
-	.is-reveal-open & {
-		display: block;
-		opacity: 1;
-	}
+	// Hero video popup
 
 	display: none;
 	opacity: 0;
@@ -316,7 +205,6 @@ $hero-height-small: 100vh;
 	text-align: center;
 
 	.iframe {
-
 		display: block;
 		margin: 10% auto;
 		max-width: 900px;
@@ -324,10 +212,13 @@ $hero-height-small: 100vh;
 		top: 0; right: 0; bottom: 0; left: 0;
 	}
 
-	iframe {}
-
 	.close-button {
 		right: 2rem;
 		top: 3.5rem;
+	}
+
+	.is-reveal-open & {
+		display: block;
+		opacity: 1;
 	}
 }

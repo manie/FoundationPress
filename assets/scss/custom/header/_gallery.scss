@@ -1,0 +1,20 @@
+.page-header.gallery {
+
+	// Header Gallery
+
+	.orbit-container {
+		height: $hero-height !important;
+
+		@include breakpoint(small only){
+			height: $hero-height-small;
+			height: calc(#{$hero-height-small} - #{$header-height});
+		}
+
+		@include breakpoint(medium only){
+			height: $hero-height-medium;
+			height: calc(#{$hero-height-medium} - #{$header-height});
+		}
+	}
+	.hero-content { color: $white; }
+
+}

@@ -729,9 +729,9 @@
             },
             "choices": {
                 "text": "Text links",
-                "button": "Button links",
+                "buttons": "Button links",
                 "header": "Whole header",
-                "video": "Video popup"
+                "popup": "Video popup"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -759,7 +759,7 @@
                     {
                         "field": "field_57e08cff77852",
                         "operator": "==",
-                        "value": "button"
+                        "value": "buttons"
                     }
                 ]
             ],
@@ -843,7 +843,7 @@
                     {
                         "field": "field_57e08cff77852",
                         "operator": "==",
-                        "value": "video"
+                        "value": "popup"
                     }
                 ]
             ],
@@ -877,5 +877,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1499749586
+    "modified": 1499770679
 }
