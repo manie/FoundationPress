@@ -1,0 +1,14 @@
+.extra-media {
+
+	&.gallery,
+	&.slider {
+		background-color: inherit;
+		height: inherit;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.orbit-container {
+		max-height: 500px;
+	}
+}

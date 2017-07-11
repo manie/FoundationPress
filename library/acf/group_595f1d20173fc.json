@@ -106,6 +106,7 @@
             "choices": {
                 "image": "Image",
                 "video": "Video",
+                "gallery": "Gallery",
                 "slider": "Slider"
             },
             "allow_null": 0,
@@ -172,9 +173,9 @@
             "height": ""
         },
         {
-            "key": "field_595f2426c1c8f",
-            "label": "Media Slider",
-            "name": "dcf_extra_media_slider",
+            "key": "field_5964c5384c2b0",
+            "label": "Media Gallery",
+            "name": "dcf_extra_media_gallery",
             "type": "gallery",
             "instructions": "",
             "required": 0,
@@ -183,7 +184,7 @@
                     {
                         "field": "field_595f1d3e0fb5a",
                         "operator": "==",
-                        "value": "slider"
+                        "value": "gallery"
                     }
                 ]
             ],
@@ -203,6 +204,38 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_595f2426c1c8f",
+            "label": "Media Slider",
+            "name": "dcf_extra_media_slider",
+            "type": "advanced_taxonomy_selector",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_595f1d3e0fb5a",
+                        "operator": "==",
+                        "value": "slider"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "data_type": "terms",
+            "taxonomies": [
+                "slider_cat"
+            ],
+            "post_type": [
+                "sliders"
+            ],
+            "field_type": "select",
+            "allow_null": 0,
+            "return_value": "object"
         },
         {
             "key": "field_595f1d201e44b",
@@ -296,5 +329,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "- DCM <b>- keep disabled<\/b>",
-    "modified": 1499597421
+    "modified": 1499776744
 }

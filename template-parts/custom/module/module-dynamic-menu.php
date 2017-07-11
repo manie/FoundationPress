@@ -17,7 +17,7 @@
 		if ( isset($module_title) && ( !empty($module_title) ) ) { $module_label = $module_title; }
 
 	// Custom Content variables
-		$menu_class = 'menu-module';
+		$menu_class = 'menu-module inlinelist';
 		if ( get_sub_field('dcf_menu_selection') ) { $menu_selection = get_sub_field('dcf_menu_selection'); }
 
 ?>

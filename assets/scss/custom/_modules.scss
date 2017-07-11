@@ -79,6 +79,11 @@ $panel-header-font-size: rem-calc(26) !default;
 				margin-right: auto;
 			}
 		}
+		&.out {
+			margin-left: 0;
+			margin-right: 0;
+			width: 100%;
+		}
 
 	// Extra margin
 		&.margin-above { margin-top: $extra-margin; }

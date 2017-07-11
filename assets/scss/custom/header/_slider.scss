@@ -6,15 +6,18 @@
 	.orbit-slide {
 		height: $hero-height;
 		height: calc(#{$hero-height} - #{$header-height});
+		max-height: $module-max-height;
 
 		@include breakpoint(small only){
 			height: $hero-height-small;
 			height: calc(#{$hero-height-small} - #{$header-height});
+			max-height: $module-max-height;
 		}
 
 		@include breakpoint(medium only){
 			height: $hero-height-medium;
 			height: calc(#{$hero-height-medium} - #{$header-height});
+			max-height: $module-max-height;
 		}
 	}
 	.hero-content {

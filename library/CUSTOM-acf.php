@@ -27,7 +27,7 @@
 			'page_title' 	=> '',
 			'menu_title' 	=> 'Theme Options',
 			'menu_slug' 	=> 'theme_options',
-			// 'parent_slug' 	=> 'themes.php',
+			'parent_slug' 	=> 'themes.php',
 			'capability' 	=> 'manage_options',
 			'icon_url' 		=> 'dashicons-dashboard',
 			'redirect' 		=> false
