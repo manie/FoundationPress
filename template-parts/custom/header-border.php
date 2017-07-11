@@ -8,8 +8,6 @@
 
 ?>
 
-<?php if ( isset($image) && isset($header_style) ) { ?>
-	<div class="hero-media">
-		<span class="bgimg" <?php echo $header_style; ?>></span>
-	</div>
+<?php if ( isset($border_enable) && isset($border_enable) ) { ?>
+	<div class="hero-border"></div>
 <?php } ?>

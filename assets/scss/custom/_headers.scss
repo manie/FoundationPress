@@ -14,7 +14,7 @@ $hero-height-small: 100vh;
 
 	.hero-content {
 
-		background-color: none;
+		// background-color: none;
 		max-width: $global-width;
 		margin: 0 auto;
 		padding: rem-calc(0 15);
@@ -79,6 +79,26 @@ $hero-height-small: 100vh;
 		@include bg-cover;
 	}
 
+	.hero-border {
+		background-color: $white;
+		bottom: rem-calc(30);
+		clear: both;
+		display: block;
+		height: rem-calc(30);
+		position: relative;
+
+		// border-image-source: url(border.svg);
+
+		@include clearfix;
+	}
+
+	.hero-details {
+		max-width: $global-width;
+		margin: 0 auto;
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+	}
+
 	// Header Overlay
 		.hero-overlay {
 			background-color: rgba($black, .1);
@@ -135,6 +155,7 @@ $hero-height-small: 100vh;
 		}
 		&[data-overlay="dark"] {
 			.hero-overlay { background-color: rgba($black, .8); }
+			.hero-content { color: $white; }
 
 			[data-overlay-type="vertical"] {
 				background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
@@ -157,20 +178,116 @@ $hero-height-small: 100vh;
 		}
 
 	// Header Image
-		.bgimg {
-			display: block;
-			height: 100%;
-			width: 100%;
-			@include bg-cover;
+		&.image {
+			.bgimg {
+				display: block;
+				height: 100%;
+				width: 100%;
+				@include bg-cover;
+			}
 		}
 
 	// Header Video
-		#bgndVideo {
-			background-color: $black;
-			height: 100%;
-			width: 100%;
+		&.gallery {
+			#bgndVideo {
+				background-color: $black;
+				height: 100%;
+				width: 100%;
 
-			.mb_YTPBar .buttonBar { display: none; }
+				.mb_YTPBar .buttonBar { display: none; }
+			}
+		}
+
+	// Header Gallery
+		&.gallery {
+			.orbit-container {
+				height: $hero-height !important;
+
+				@include breakpoint(small only){
+					height: $hero-height-small;
+					height: calc(#{$hero-height-small} - #{$header-height});
+				}
+
+				@include breakpoint(medium only){
+					height: $hero-height-medium;
+					height: calc(#{$hero-height-medium} - #{$header-height});
+				}
+			}
+			.hero-content { color: $white; }
+		}
+
+	// Header Slider (from post tyoe)
+		&.slider {
+			.orbit-container,
+			.orbit-slide {
+				height: $hero-height !important;
+
+				@include breakpoint(small only){
+					height: $hero-height-small;
+					height: calc(#{$hero-height-small} - #{$header-height});
+				}
+
+				@include breakpoint(medium only){
+					height: $hero-height-medium;
+					height: calc(#{$hero-height-medium} - #{$header-height});
+				}
+			}
+			.hero-content { color: $white; }
+		}
+
+	// Header Map
+		&.map {
+			.hero-map {
+				height: $hero-height !important;
+
+				@include breakpoint(small only){
+					height: $hero-height-small;
+					height: calc(#{$hero-height-small} - #{$header-height});
+				}
+
+				@include breakpoint(medium only){
+					height: $hero-height-medium;
+					height: calc(#{$hero-height-medium} - #{$header-height});
+				}
+
+				@include bg-cover;
+			}
+			.contact-details {
+				background-color: $light-gray;
+				display: block;
+				max-width: 30rem;
+				min-width: 300px;
+				padding: rem-calc(30 40);
+				position: absolute;
+				top: 20%; right: 0;
+				text-align: left;
+				z-index: 3;
+
+				p:last-of-type { margin-bottom: 0; }
+
+				.address {
+					max-height: 100px;
+					overflow: hidden;
+					padding-left: rem-calc(30);
+
+					.fa {
+						display: block;
+						float: left;
+						margin-left: -(rem-calc(30));
+						margin-top: rem-calc(5);
+					}
+				}
+
+				.fa-fw { width: rem-calc(25);  }
+
+				@include vertical-center;
+			}
+
+			&[data-map="detail"] {
+				.hero-content  {
+					padding-right: 500px;
+				}
+			}
 		}
 
 	@include breakpoint(small only){
@@ -187,7 +304,13 @@ $hero-height-small: 100vh;
 
 #video-popup-modal {
 
-	display: block;
+	.is-reveal-open & {
+		display: block;
+		opacity: 1;
+	}
+
+	display: none;
+	opacity: 0;
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 	text-align: center;

@@ -31,3 +31,17 @@ section.container {
 	list-style: none;
 	margin-left: 0;
 }
+
+// Default ACF maps
+.acf-map {
+	background-color: $light-gray;
+	border: $light-gray solid 1px;
+	height: 400px;
+	margin: 0;
+	width: 100%;
+}
+
+/* fixes potential theme css conflict */
+.acf-map img {
+   max-width: inherit !important;
+}

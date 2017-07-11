@@ -3,6 +3,168 @@
     "title": "THEME OPTIONS",
     "fields": [
         {
+            "key": "field_59642d6f1c83d",
+            "label": "Theme Options",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hide-label",
+                "id": ""
+            },
+            "message": "<h1>Theme options and global content<\/h1>\r\nRemember to click the \"Update\" button to save changes.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59642c8a7506a",
+            "label": "Contact Details",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59642ea786314",
+            "label": "Contact Details Message",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hide-label",
+                "id": ""
+            },
+            "message": "Add client Contact Details here to be used across theme, including on custom Contact Page and Widget modules.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59643226e0da1",
+            "label": "Contact Phone Number",
+            "name": "dcf_contact_phone_number",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_596437820f30e",
+            "label": "Contact Fax Number",
+            "name": "dcf_contact_fax_number",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59643253e0da2",
+            "label": "Contact Mobile Number",
+            "name": "dcf_contact_mobile_number",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59643266e0da3",
+            "label": "Contact Email Address",
+            "name": "dcf_contact_email_address",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_59643203e0da0",
+            "label": "Contact Address Text",
+            "name": "dcf_contact_address_text",
+            "type": "textarea",
+            "instructions": "Enter address details as plain text for custom visual formatting. <strong> User Google Map below for accurate location data <\/strong>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_59642cbe7506b",
+            "label": "Contact Address Map",
+            "name": "dcf_contact_address_map",
+            "type": "google_map",
+            "instructions": "Search Google for map based address details. Move the marker if location is not accurate.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
+            "height": ""
+        },
+        {
             "key": "field_5938a77caa47d",
             "label": "API Keys",
             "name": "",
@@ -17,6 +179,23 @@
             },
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_59642fcf611e4",
+            "label": "API Keys Message",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hide-label",
+                "id": ""
+            },
+            "message": "Add client API keys here to be used across theme.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_5938a792aa47e",
@@ -56,9 +235,9 @@
     "position": "normal",
     "style": "seamless",
     "label_placement": "left",
-    "instruction_placement": "field",
+    "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "- Dando Custom Theme Options",
-    "modified": 1499561005
+    "modified": 1499744172
 }

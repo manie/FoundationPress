@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_59620eb1f8d5d",
-            "label": "Header",
+            "label": "Type",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -24,7 +24,7 @@
             "name": "dcf_header_option",
             "type": "radio",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -38,7 +38,7 @@
                 "video": "Hero video with custom content",
                 "gallery": "Hero gallery with custom content",
                 "slider": "Slider category with item content where available",
-                "map": "Google map (for \"Contact Us\" page only)"
+                "map": "Google map with optional global contact details"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -46,92 +46,6 @@
             "default_value": "default",
             "layout": "vertical",
             "return_format": "value"
-        },
-        {
-            "key": "field_57e093b60fef5",
-            "label": "Enable Overlay",
-            "name": "dcf_header_overlay_enable",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_57e091051c47a",
-                        "operator": "!=",
-                        "value": "none"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Add custom image overlay (in between image & content) to make text more readable?",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_57e08cff760e1",
-            "label": "Enable Link",
-            "name": "dcf_header_link_enable",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_57e091051c47a",
-                        "operator": "!=",
-                        "value": "none"
-                    },
-                    {
-                        "field": "field_57e091051c47a",
-                        "operator": "!=",
-                        "value": "map"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Add a link to the header, either in content or around the whole header?",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_57e1d5204b392",
-            "label": "Enable Border",
-            "name": "dcf_header_border_enable",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_57e091051c47a",
-                        "operator": "!=",
-                        "value": "none"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Add a decorative border below header image?",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
         },
         {
             "key": "field_5962103e92e1b",
@@ -187,51 +101,6 @@
             "library": "all"
         },
         {
-            "key": "field_58210c00953f9",
-            "label": "Video",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_57e091051c47a",
-                        "operator": "==",
-                        "value": "video"
-                    },
-                    {
-                        "field": "field_57e091051c47a",
-                        "operator": "!=",
-                        "value": "none"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_58210cf5953fa",
-            "label": "Hero Video",
-            "name": "dcf_header_hero_video",
-            "type": "oembed",
-            "instructions": "Please be considerate with the background video choice as the video will autoplay (ie, no sound recommended). Featured Image will be used as fallback if one is set.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "width": "",
-            "height": ""
-        },
-        {
             "key": "field_59620d81b9619",
             "label": "Slider",
             "name": "",
@@ -265,22 +134,22 @@
             "label": "Hero Slider",
             "name": "dcf_header_hero_slider",
             "type": "advanced_taxonomy_selector",
-            "instructions": "",
-            "required": 0,
+            "instructions": "Select the category of <strong>Sliders<\/strong> to use. Content, Overlay & Links will depend on individual slides.",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "data_type": "taxonomy",
+            "data_type": "terms",
             "taxonomies": "",
             "post_type": [
                 "sliders"
             ],
             "field_type": "select",
-            "allow_null": 1,
-            "return_value": "term_id"
+            "allow_null": 0,
+            "return_value": "object"
         },
         {
             "key": "field_5962103d92e1a",
@@ -316,8 +185,8 @@
             "label": "Hero Gallery",
             "name": "dcf_header_hero_gallery",
             "type": "gallery",
-            "instructions": "",
-            "required": 0,
+            "instructions": "Select the items to be displayed in slider format within the header.",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -335,6 +204,283 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_58210c00953f9",
+            "label": "Video",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_57e091051c47a",
+                        "operator": "==",
+                        "value": "video"
+                    },
+                    {
+                        "field": "field_57e091051c47a",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_58210cf5953fa",
+            "label": "Hero Video",
+            "name": "dcf_header_hero_video",
+            "type": "oembed",
+            "instructions": "Please be considerate with the background video choice as the video will autoplay (ie, no sound recommended). Featured Image will be used as fallback if one is set.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_59643996e5c46",
+            "label": "Map",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_57e091051c47a",
+                        "operator": "==",
+                        "value": "map"
+                    },
+                    {
+                        "field": "field_57e091051c47a",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_596439a3e5c47",
+            "label": "Map Option",
+            "name": "dcf_header_hero_map_option",
+            "type": "radio",
+            "instructions": "Select the source for map data. Global contact details are set in Theme Options.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "global": "Global contact details",
+                "custom": "Custom map details"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "global",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_59643a14e5c48",
+            "label": "Hero Map",
+            "name": "dcf_header_hero_map_custom",
+            "type": "google_map",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_596439a3e5c47",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
+            "height": ""
+        },
+        {
+            "key": "field_596459f137729",
+            "label": "Contact Details",
+            "name": "dcf_header_hero_map_details",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_596439a3e5c47",
+                        "operator": "==",
+                        "value": "global"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Include extra Contact Details information?",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59645676b7b0c",
+            "label": "Static Map",
+            "name": "dcf_header_hero_map_static",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Use static map image instead of dynamic map?",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5964158b4dbcf",
+            "label": "Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_57e093b60fef5",
+            "label": "Enable Overlay",
+            "name": "dcf_header_overlay_enable",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_57e091051c47a",
+                        "operator": "!=",
+                        "value": "none"
+                    },
+                    {
+                        "field": "field_57e091051c47a",
+                        "operator": "!=",
+                        "value": "slider"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Add custom image overlay (in between image & content) to make text more readable?",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_57e08cff760e1",
+            "label": "Enable Links",
+            "name": "dcf_header_link_enable",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_57e091051c47a",
+                        "operator": "!=",
+                        "value": "none"
+                    },
+                    {
+                        "field": "field_57e091051c47a",
+                        "operator": "!=",
+                        "value": "slider"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Add a link to the header, either in content or around the whole header?",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_57e1d5204b392",
+            "label": "Enable Border",
+            "name": "dcf_header_border_enable",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_57e091051c47a",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Add a decorative border below header image?",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_57e08cff764ca",
@@ -442,6 +588,11 @@
                         "field": "field_57e091051c47a",
                         "operator": "!=",
                         "value": "default"
+                    },
+                    {
+                        "field": "field_57e091051c47a",
+                        "operator": "!=",
+                        "value": "slider"
                     }
                 ]
             ],
@@ -547,6 +698,11 @@
                         "field": "field_57e091051c47a",
                         "operator": "!=",
                         "value": "default"
+                    },
+                    {
+                        "field": "field_57e091051c47a",
+                        "operator": "!=",
+                        "value": "slider"
                     }
                 ]
             ],
@@ -721,5 +877,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1499669313
+    "modified": 1499749586
 }

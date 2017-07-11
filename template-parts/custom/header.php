@@ -13,7 +13,7 @@
 	<div id="header-container">
 		<header class="page-header <?php echo $header_option; ?>">
 
-			<div class="hero-content">
+			<div class="hero-content <?php if (isset($has_media)) { echo $has_media; } ?>">
 				<?php if ( isset($content_heading) && ( !empty($content_heading) ) ) { ?>
 					<h1 class="heading"><?php echo $content_heading; ?></h1>
 				<?php } ?>

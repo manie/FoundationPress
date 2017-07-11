@@ -184,12 +184,12 @@ function DANDO_register_required_plugins() {
 			'required' 			=> false,
 			'force_activation'	=> false
 		),
-		array(
-			'name' 				=> 'Capability Manager Enhanced',
-			'slug' 				=> 'capability-manager-enhanced',
-			'required' 			=> false,
-			'force_activation'	=> false
-		),
+		// array(
+		// 	'name' 				=> 'Capability Manager Enhanced',
+		// 	'slug' 				=> 'capability-manager-enhanced',
+		// 	'required' 			=> false,
+		// 	'force_activation'	=> false
+		// ),
 		array(
 			'name' 				=> 'Disable Comments',
 			'slug' 				=> 'disable-comments',
@@ -235,6 +235,12 @@ function DANDO_register_required_plugins() {
 		array(
 			'name' 				=> 'Media File Renamer',
 			'slug' 				=> 'media-file-renamer',
+			'required' 			=> false,
+			'force_activation'	=> false
+		),
+		array(
+			'name' 				=> 'Members',
+			'slug' 				=> 'members',
 			'required' 			=> false,
 			'force_activation'	=> false
 		),

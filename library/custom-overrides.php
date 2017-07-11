@@ -161,11 +161,11 @@
 // ACF PRO - Register theme options page
 	if( function_exists('acf_add_options_page') ) {
 		acf_add_options_page(array(
-			'page_title' 	=> 'Theme Options',
+			'page_title' 	=> '',
 			'menu_title' 	=> 'Theme Options',
 			'menu_slug' 	=> 'theme_options',
 			// 'parent_slug' 	=> 'themes.php',
-			'capability' 	=> 'edit_theme_options',
+			'capability' 	=> 'manage_options',
 			'icon_url' 		=> 'dashicons-dashboard',
 			'redirect' 		=> false
 		));
