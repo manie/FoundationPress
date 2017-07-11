@@ -9,7 +9,6 @@
 
 //  Settings
 @import "global/settings"; // Foundation settings file.
-@import "custom/_settings"; // Custom settings file.
 
 // Foundation mixins & browser resets
 @import '../components/foundation-sites/scss/foundation';
@@ -25,6 +24,9 @@
 
 // Foundation global styles
 @include foundation-global-styles;
+
+// CUSTOME variables for foundation overrides
+@import "custom/_settings"; // Custom settings file.
 
 // Individual foundation components
 @include foundation-grid;

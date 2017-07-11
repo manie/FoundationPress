@@ -1,90 +1,95 @@
 // Navigation breakpoints
 .desktop-menu, .top-bar-left {
-  @include show-for(medium);
+	@include show-for(medium);
 }
 
 #mobile-menu, .title-bar {
-  @include hide-for(medium);
+	@include hide-for(medium);
+}
+
+.top-bar, .top-bar ul {
+	background-color: $primary-color;
 }
 
 // Mobile menu
 .off-canvas {
-  > ul.menu {
-    height: 100vh;
-    padding: 1rem;
+	> ul.menu {
+		height: 100vh;
+		padding: 1rem;
 
-    a {
-      color: $white;
-      font-weight: 600;
-      font-size: rem-calc(18);
-      opacity: .75;
-    }
+		a {
+			color: $white;
+			font-weight: 600;
+			font-size: rem-calc(18);
+			opacity: .75;
+		}
 
-    .is-accordion-submenu-parent > a::after {
-      display: block;
-      width: 0;
-      height: 0;
-      border: inset 6px;
-      content: '';
-      border-bottom-width: 0;
-      border-top-style: solid;
-      border-color: $white transparent transparent;
-      position: absolute;
-      top: 50%;
-      margin-top: -3px;
-      right: 1rem;
-      }
-  }
+		.is-accordion-submenu-parent > a::after {
+			display: block;
+			width: 0;
+			height: 0;
+			border: inset 6px;
+			content: '';
+			border-bottom-width: 0;
+			border-top-style: solid;
+			border-color: $white transparent transparent;
+			position: absolute;
+			top: 50%;
+			margin-top: -3px;
+			right: 1rem;
+		}
+	}
 
-  .menu .active > a { background-color: lighten($outer-space, 10%); }
+	.menu .active > a { background-color: lighten($outer-space, 10%); }
 }
 
 .title-bar-title {
-  a {
-    font-size: 1rem;
-    color: #B9B9B9;
-  }
+	a {
+		font-size: 1rem;
+		color: $primary-color-text;
+	}
 }
 
 // Tablet and desktop menu
 .top-bar {
-  .menu .home a {
-    font-size: 1rem;
-    color: #B9B9B9;
-  }
+	.menu .home a {
+		font-size: 1rem;
+		color: $primary-color-text;
+	}
 
-  .menu a {
-    height: 45px;
-    line-height: 45px;
-    color: #e6e6e6;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-weight: bold;
-    font-size: 0.8rem;
-    line-height: 1;
+	.menu a {
+		height: 45px;
+		line-height: 45px;
+		color: $primary-color-text;
+		padding-top: 0;
+		padding-bottom: 0;
+		font-weight: bold;
+		font-size: 0.8rem;
+		line-height: 1;
 
-    &:hover:not(.button) {
-      background-color: $primary-color;
-    }
-  }
+		&:hover:not(.button) {
+			background-color: $primary-color-dark;
+		}
+	}
 
-  .menu .active > a { background-color: lighten($primary-color, 10%); }
+	.menu .current-menu-item > a { background-color: $primary-color-light; }
 
-  .menu>li:not(.menu-text)>a { padding: 1rem; }
-  .menu li.menu-item {
-    border: 1px solid #4e4e4e;
-    &:not(:last-child) {
-      border-right: none;
-    }
-  }
+	.menu>li:not(.menu-text)>a { padding: 1rem; }
+	.menu li.menu-item {
+		border-left: 1px solid $primary-color-border;
+		border-right: 1px solid $primary-color-border;
+		&:not(:last-child) {
+			border-right: none;
+		}
+	}
 
-  .menu.submenu li.menu-item {
-    // border-bottom: none;
-    border-right: 1px solid #4e4e4e;
-    &:not(:last-child) {
-      border-bottom: none;
-    }
-  }
+	.menu.submenu li.menu-item {
+		// border-bottom: none;
+		border-right: 1px solid $primary-color-border;
+		&:not(:last-child) {
+			border-bottom: none;
+		}
+	}
 
   .dropdown.menu .submenu { border: 0; }
   .dropdown.menu .has-submenu.is-down-arrow a { padding-right: 1rem; }
@@ -96,12 +101,12 @@
 // https://css-tricks.com/snippets/css/clear-fix/
 .post-navigation:before,
 .post-navigation:after {
-  content: "";
-  display: table;
+	content: "";
+	display: table;
 }
 
 .post-navigation:after {
-  clear:both;
+	clear:both;
 }
 
 .nav-previous { float:left; }

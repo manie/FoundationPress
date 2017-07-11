@@ -12,23 +12,24 @@
 
 // OVERRIDE DEFAULT COLOURS
 $foundation-palette: (
-	primary: #001f3f,
-	secondary: #0074D9,
-	tertiary: #7FDBFF,
+	primary: #ef423f,
+	secondary: #1d1d1d,
+	tertiary: #8b8b8b,
 	success: #2ECC40,
 	warning: #FF851B,
 	alert: #FF4136,
 );
 
-// Additional default colour
-// EXISTING: $primary-color: map-get($foundation-palette, primary) !global;
-// EXISTING: $secondary-color: map-get($foundation-palette, secondary) !global;
+$primary-color: map-get($foundation-palette, primary);
+$secondary-color: map-get($foundation-palette, secondary) !global;
 $tertiary-color: map-get($foundation-palette, tertiary) !global;
 
 $primary-color-set: (
 	regular: $primary-color,
-	light: lighten( $primary-color, 10% ),
+	light: lighten( $primary-color, 25% ),
 	dark: darken( $primary-color, 10% ),
+	text: $white,
+	border: $white,
 );
 
 $secondary-color-set: (
@@ -43,6 +44,12 @@ $tertiary-color-set: (
 	dark: darken( $tertiary-color, 10% ),
 );
 
+// New colour variable
+$primary-color-regular: map-get($primary-color-set, regular);
+$primary-color-light: map-get($primary-color-set, light);
+$primary-color-dark: map-get($primary-color-set, dark);
+$primary-color-text: map-get($primary-color-set, text);
+$primary-color-border: map-get($primary-color-set, border);
 
 // 2. Layout Sizes
 // ---------
@@ -57,3 +64,66 @@ $panel-margin: 0; // rem-calc(20 10);
 /// Extra bottom/top margin for modules
 /// @type Number
 $extra-margin: rem-calc(15);
+
+// 3. Other colour overrides
+// ---------
+
+$outer-space: $primary-color;
+
+$anchor-color: $primary-color-regular;
+$anchor-color-hover: $primary-color-light;
+
+$accordion-item-color: $primary-color;
+$accordionmenu-arrow-color: $primary-color;
+
+$badge-background: $primary-color;
+$badge-color: $white;
+$badge-color-alt: $black;
+$badge-palette: $foundation-palette;
+
+$breadcrumbs-item-color: $primary-color;
+$breadcrumbs-item-color-current: $black;
+$breadcrumbs-item-color-disabled: $medium-gray;
+
+$button-background: $primary-color-regular;
+$button-background-hover: $primary-color-light;
+$button-color: $white;
+$button-color-alt: $black;
+$button-palette: $foundation-palette;
+
+$drilldown-arrow-color: $primary-color;
+
+$dropdownmenu-arrow-color: $anchor-color;
+
+$label-background: $primary-color;
+
+$pagination-item-background-hover: $light-gray;
+$pagination-item-background-current: $primary-color;
+$pagination-item-color-current: $white;
+$pagination-item-color-disabled: $medium-gray;
+
+$progress-background: $medium-gray;
+$progress-meter-background: $primary-color;
+
+$slider-handle-background: $primary-color;
+$slider-background: $light-gray;
+$slider-fill-background: $medium-gray;
+
+$switch-background: $medium-gray;
+$switch-background-active: $primary-color;
+
+$tab-background: $white;
+$tab-color: $primary-color;
+$tab-background-active: $light-gray;
+$tab-active-color: $primary-color;
+$tab-item-background-hover: $white;
+$tab-content-background: $white;
+$tab-content-border: $light-gray;
+$tab-content-color: $body-font-color;
+
+$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
+
+$titlebar-background: $outer-space;
+$titlebar-color: $white;
+$titlebar-icon-color: $white;
+$titlebar-icon-color-hover: $medium-gray;
