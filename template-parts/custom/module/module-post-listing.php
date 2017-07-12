@@ -1,7 +1,7 @@
 <?php
 
 	// Include required module variables
-		include(locate_template('template-parts/custom/VARS-modules.php'));
+		include(locate_template('template-parts/custom/VARS/modules.php'));
 
 	// Content Module
 		$module_label = "Post Listing";
@@ -92,16 +92,20 @@
 
 		<?php get_template_part( 'template-parts/custom/module/module', 'header' );  ?>
 
-		<?php while ( $query->have_posts() ) { $query->the_post(); ?>
-			<div class="panel-content">
-				<section class="section <?php echo $content_class; ?>">
+		<div class="panel-content">
+			<section class="section <?php echo $content_class; ?>">
+				<?php while ( $query->have_posts() ) { $query->the_post(); ?>
 					<?php
 						$i++; // Increment count for active class
-						get_template_part( 'template-parts/content', 'custom');
+						if ( get_post_type() == 'testimonials' ){
+							get_template_part( 'template-parts/custom/content/archive', 'testimonials');
+						} else {
+							get_template_part( 'template-parts/content', 'custom');
+						}
 					?>
-				</section>
-			</div>
-		<?php } ?>
+				<?php } ?>
+			</section>
+		</div>
 	</article>
 
 <?php } ?>

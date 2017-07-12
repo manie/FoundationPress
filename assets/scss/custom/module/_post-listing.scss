@@ -1,10 +1,3 @@
-/// Default bottom border color of the post
-/// @type Color
-$post-item-border-bottom-color: $light-gray !default;
-
-/// Default bottom border width of the post
-/// @type Number
-$post-item-border-bottom-width: rem-calc(1) !default;
 
 /// Adds styles for post-list's elements in small screen and it also could be used for bigger screen in small areas
 @mixin small-posts-list {
@@ -41,7 +34,7 @@ $post-item-border-bottom-width: rem-calc(1) !default;
 
 	.post-item{
 		// @include grid-row();
-		padding: rem-calc(15 0);
+		padding: 0; // rem-calc(0 0 15 0);
 
 		.post-thumbnail{
 			display: block;

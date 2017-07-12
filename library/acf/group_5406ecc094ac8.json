@@ -1,0 +1,450 @@
+{
+    "key": "group_5406ecc094ac8",
+    "title": "Content - Testimonial",
+    "fields": [
+        {
+            "key": "field_596548563c8a5",
+            "label": "Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_53f5dcea266b1",
+            "label": "Testimonial Type",
+            "name": "dcf_testimonial_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "text": "Text Testimonial",
+                "video": "Video Testimonial"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_53f83321eafc6",
+            "label": "Include Readmore",
+            "name": "dcf_testimonial_option_readmore",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Include more content through a read more link (opens new window) ?",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_53f5fe826ebec",
+            "label": "Testimonial Introduction",
+            "name": "dcf_testimonial_option_intro",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_53f5dcea266b1",
+                        "operator": "==",
+                        "value": "video"
+                    },
+                    {
+                        "field": "field_53f83321eafc6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Include the testimonial excerpt as video introduction?",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_53f5f37acdb45",
+            "label": "Replace Title",
+            "name": "dcf_testimonial_option_title",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Replace the testimonial title with the Author's details?",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_53f5dcd8266b0",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_53f5f88870911",
+            "label": "Testimonial Excerpt",
+            "name": "dcf_testimonial_excerpt",
+            "type": "limiter",
+            "instructions": "Enter the testimonial excerpt here.\r\n<b>Limited to 500 characters, no formatting.<\/b>",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_53f5dcea266b1",
+                        "operator": "!=",
+                        "value": "video"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_53f83321eafc6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "character_number": 500,
+            "display_characters": 1
+        },
+        {
+            "key": "field_53f5dbc9cdc9d",
+            "label": "Testimonial Content",
+            "name": "dcf_testimonial_content",
+            "type": "wysiwyg",
+            "instructions": "Please enter the testimonial page content here:\r\n<b>NB: This content only appears on the single view<\/b>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_53f5dcea266b1",
+                        "operator": "==",
+                        "value": "text"
+                    },
+                    {
+                        "field": "field_53f83321eafc6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_53f5dc0bcdc9e",
+            "label": "Testimonial Video",
+            "name": "dcf_testimonial_video",
+            "type": "oembed",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_53f5dcea266b1",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_53f80e47cef67",
+            "label": "Image",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_53f80e57cef68",
+            "label": "Image Type",
+            "name": "dcf_testimonial_image_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "No Image",
+                "square": "Square Image (cropped)",
+                "portrait": "Portrait Image (cropped)",
+                "other": "Full Image (NO crop)"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_53f80f2ef2774",
+            "label": "Image - Square",
+            "name": "dcf_testimonial_image_square",
+            "type": "image_crop",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_53f80e57cef68",
+                        "operator": "==",
+                        "value": "square"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "hard",
+            "target_size": "medium",
+            "width": 400,
+            "height": 400,
+            "preview_size": "full",
+            "force_crop": "yes",
+            "save_in_media_library": "no",
+            "retina_mode": "no",
+            "save_format": "object",
+            "library": "all"
+        },
+        {
+            "key": "field_53f80f4cf2775",
+            "label": "Image - Portrait",
+            "name": "dcf_testimonial_image_portrait",
+            "type": "image_crop",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_53f80e57cef68",
+                        "operator": "==",
+                        "value": "portrait"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "hard",
+            "target_size": "custom",
+            "width": 400,
+            "height": 600,
+            "preview_size": "full",
+            "force_crop": "yes",
+            "save_in_media_library": "no",
+            "retina_mode": "no",
+            "save_format": "object",
+            "library": "all"
+        },
+        {
+            "key": "field_53f8123a2df07",
+            "label": "Image - Full Size (no crop)",
+            "name": "dcf_testimonial_image_full",
+            "type": "image_crop",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_53f80e57cef68",
+                        "operator": "==",
+                        "value": "other"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "min",
+            "target_size": "large",
+            "width": "",
+            "height": "",
+            "preview_size": "full",
+            "force_crop": "no",
+            "save_in_media_library": "no",
+            "retina_mode": "no",
+            "save_format": "object",
+            "library": "all"
+        },
+        {
+            "key": "field_53f5dad5cdc99",
+            "label": "Author",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_53f5dae7cdc9a",
+            "label": "First Name",
+            "name": "dcf_testimonial_author_name",
+            "type": "text",
+            "instructions": "Enter the testimonial author's first name, or full name if separate fields not required.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Author's First Name",
+            "prepend": "",
+            "append": "",
+            "maxlength": 100
+        },
+        {
+            "key": "field_53f5db6ccdc9b",
+            "label": "Last Name",
+            "name": "dcf_testimonial_author_lastname",
+            "type": "text",
+            "instructions": "Enter the testimonial author's last name if required.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Author's Last Name",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_53f5dba4cdc9c",
+            "label": "Location",
+            "name": "dcf_testimonial_author_location",
+            "type": "text",
+            "instructions": "Enter the testimonial author's location if required.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Author's Location",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "testimonials"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1499816818
+}

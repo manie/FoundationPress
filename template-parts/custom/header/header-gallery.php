@@ -1,7 +1,7 @@
 <?php
 
 	// Include required module variables
-		include(locate_template('template-parts/custom/VARS-header.php'));
+		include(locate_template('template-parts/custom/VARS/header.php'));
 
 	// Extra class for panel content
 		$content_class = 'hero-media';

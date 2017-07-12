@@ -33,7 +33,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		// Load Custom jQuery
 		wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/javascript/custom.js', array('jquery'), '', true );
 
-		if ( get_field('dcf_header_option') == 'video' ) {
+		if ( class_exists('acf') && get_field('dcf_header_option') == 'video' ) {
 			wp_enqueue_script( 'mbyt', get_template_directory_uri() . '/assets/javascript/vendor/jquery.mb.YTPlayer.min.js', array('jquery'), '3.0.20', false );
 			wp_enqueue_style( 'mbyt-styles', get_template_directory_uri() . '/assets/stylesheets/vendor/YTPlayer/jquery.mb.YTPlayer.min.css', array(), '3.0.20', 'all' );
 		}

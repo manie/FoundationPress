@@ -11,4 +11,24 @@
 			@include grid-column(8);
 		}
 	}
+
+	.post-social {
+		margin-top: 2rem;
+	}
+
+	.post-navigation {
+		margin-top: 2rem;
+
+		.nav-links {
+			a > { @extend .button; }
+		}
+	}
+
+	.post {
+		margin-bottom: 3rem;
+
+		.entry-image {
+			margin-bottom: 1rem;
+		}
+	}
 }

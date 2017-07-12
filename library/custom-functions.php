@@ -81,3 +81,61 @@
 	function empty_content($str) {
 		return trim(str_replace('&nbsp;','',strip_tags($str))) == '';
 	}
+
+// Custom Social Sharing, hooked into the content filter
+	function dando_social_sharing_buttons($content) {
+		global $post;
+		if(is_single() && !is_home()){
+
+			// Get current page URL
+			$post_URL = urlencode(get_permalink());
+
+			// Get current page title
+			$post_Title = str_replace( ' ', '%20', get_the_title());
+
+			// Get Post Thumbnail for pinterest
+			$post_Thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+
+			// Get Post Excerpt for captions
+			// $post_Excerpt = get_the_excerpt( $post->ID );
+
+			if ( empty( $post->post_excerpt ) ) {
+				$post_Excerpt = wp_kses_post( wp_trim_words( $post->post_content, 20 ) );
+			} else {
+				$post_Excerpt = wp_kses_post( $post->post_excerpt );
+			}
+
+			// Construct sharing URL without using any script
+			$twitterURL = 'https://twitter.com/intent/tweet?text='.$post_Title.'&amp;url='.$post_URL;
+			$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$post_URL;
+			$googleURL = 'https://plus.google.com/share?url='.$post_URL;
+			$bufferURL = 'https://bufferapp.com/add?url='.$post_URL.'&amp;text='.$post_Title;
+			$whatsappURL = 'whatsapp://send?text='.$post_Title . ' ' . $post_URL;
+			$linkedInURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$post_URL.'&amp;title='.$post_Title;
+			$pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$post_URL.'&amp;media='.$post_Thumbnail[0].'&amp;description='.$post_Title;
+			$tumblrURL = 'https://www.tumblr.com/widgets/share/tool?canonicalUrl='.$post_URL.'&title='.$post_Title.'&caption='.$post_Excerpt.'';
+
+			// Add sharing button at the end of page/page content
+			$content .= '<div class="post-social">';
+			$content .= '<h5>SHARE ON</h5>';
+			$content .= '<a href="'.$facebookURL.'" target="_blank" class="button social facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook </a>';
+			$content .= '<a href="'.$twitterURL.'" target="_blank" class="button social twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter </a>';
+			$content .= '<a href="'.$linkedInURL.'" target="_blank" class="button social linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin </a>';
+			// $content .= '<a href="#" class="button social youtube"><i class="fa fa-youtube" aria-hidden="true"></i> Youtube </a>';
+			// $content .= '<a href="#" class="button social instagram"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram </a>';
+			// $content .= '<a href="'.$pinterestURL.'" data-pin-custom="true" target="_blank" class="button social pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i> Pinterest </a>';
+			$content .= '<a href="'.$googleURL.'" target="_blank" class="button social google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i> Google + </a>';
+			// $content .= '<a href="#" class="button social github"><i class="fa fa-github" aria-hidden="true"></i> Github </a>';
+			// $content .= '<a href="'.$tumblrURL.'" target="_blank" class="button social tumblr"><i class="fa fa-tumblr" aria-hidden="true"></i> Tumblr </a>';
+			// $content .= '<a href="'.$bufferURL.'" target="_blank" class="button social buffer"><i class="fa fa-share-square-o" aria-hidden="true"></i> Buffer </a>';
+			$content .= '<a href="'.$whatsappURL.'" target="_blank" class="button social whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp </a>';
+			$content .= '</div>';
+
+			return $content;
+
+		}else{
+			// if not a post/page then don't include sharing button
+			return $content;
+		}
+	};
+	add_filter( 'the_content', 'dando_social_sharing_buttons');

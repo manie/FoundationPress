@@ -11,4 +11,16 @@
 			@include grid-column(8);
 		}
 	}
+
+	.post-item {
+		margin-bottom: 3rem;
+
+		.entry-image {
+			margin-bottom: 1rem;
+		}
+
+		&:not(:last-child){
+			border-bottom: $post-item-border-bottom-width solid $post-item-border-bottom-color;
+		}
+	}
 }

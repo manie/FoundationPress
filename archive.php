@@ -23,7 +23,15 @@ get_header(); ?>
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+
+			<?php if ( is_post_type_archive('testimonials') ){ ?>
+
+				<?php get_template_part( 'template-parts/custom/content/archive', 'testimonials'); ?>
+
+			<?php } else { ?>
+				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+			<?php } ?>
+
 		<?php endwhile; ?>
 
 		<?php else : ?>

@@ -1,7 +1,7 @@
 <?php
 
 	// Include required module variables
-		include(locate_template('template-parts/custom/VARS-modules.php'));
+		include(locate_template('template-parts/custom/VARS/modules.php'));
 
 	// Content Module
 		$module_label = "Dynamic Menu";

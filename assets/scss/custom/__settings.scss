@@ -75,6 +75,14 @@ $hero-height-small: 100vh;
 
 $module-max-height: rem-calc(800) !default;
 
+/// Default bottom border color of the post
+/// @type Color
+$post-item-border-bottom-color: $light-gray !default;
+
+/// Default bottom border width of the post
+/// @type Number
+$post-item-border-bottom-width: rem-calc(1) !default;
+
 // ---------
 // 3. Foundation overrides
 // ---------

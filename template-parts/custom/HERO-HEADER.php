@@ -1,7 +1,7 @@
 <?php
 
 	// Include required module variables
-		include(locate_template('template-parts/custom/VARS-header.php'));
+		include(locate_template('template-parts/custom/VARS/header.php'));
 
 	// Extra header classes for panel content
 		$content_class[] = 'page-header';

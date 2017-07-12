@@ -14,13 +14,13 @@ p:empty { margin-bottom: 0; }
 section.container {
 
 	@include breakpoint(small) {
-		.main-content {
+		.main-content, .post-item {
 			padding: rem-calc(10);
 		}
 	}
 
 	@include breakpoint(medium) {
-		.main-content {
+		.main-content, .post-item {
 			padding: rem-calc(15);
 		}
 	}

@@ -5,4 +5,19 @@
 	.main-content {
 		@extend .flexible-content !optional;
 	}
+
+	.post-item {
+		@include grid-row();
+		// margin-bottom: 1rem;
+
+		.entry-image {
+			@include grid-column(4)
+			// margin-bottom: 1rem;
+			padding-left: 0 !important;
+		}
+
+		&:not(:last-child){
+			// border-bottom: $post-item-border-bottom-width solid $post-item-border-bottom-color;
+		}
+	}
 }

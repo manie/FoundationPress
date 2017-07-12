@@ -58,4 +58,6 @@ require_once( 'library/CUSTOM-shortcodes.php' );
 require_once( 'library/CUSTOM-theme-content.php' );
 
 /** CUSTOM POST TYPES */
+require_once( 'library/types/CUSTOM_TYPE_ctas.php' );
 require_once( 'library/types/CUSTOM_TYPE_sliders.php' );
+require_once( 'library/types/CUSTOM_TYPE_testimonials.php' );

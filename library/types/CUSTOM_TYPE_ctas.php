@@ -8,13 +8,13 @@
 
 
 // Register Custom Post Type
-function custom_post_type_SLIDERS() {
+function custom_post_type_CTAS() {
 
  	$labels = array(
- 		'name'                  => _x( 'Sliders', 'Sliders Post Type', 'DANDO' ),
- 		'singular_name'         => _x( 'Slider', 'Slider Post Type', 'DANDO' ),
- 		'menu_name'             => __( 'Sliders', 'DANDO' ),
- 		'name_admin_bar'        => __( 'Sliders', 'DANDO' ),
+ 		'name'                  => _x( 'CTA\'s', 'Call to Action\'s Post Type', 'DANDO' ),
+ 		'singular_name'         => _x( 'CTA', 'Call to Action\'s Post Type', 'DANDO' ),
+ 		'menu_name'             => __( 'CTA\'s', 'DANDO' ),
+ 		'name_admin_bar'        => __( 'CTA\'s', 'DANDO' ),
  		'archives'              => __( 'Item Archives', 'DANDO' ),
  		'attributes'            => __( 'Item Attributes', 'DANDO' ),
  		'parent_item_colon'     => __( 'Parent Item:', 'DANDO' ),
@@ -40,17 +40,17 @@ function custom_post_type_SLIDERS() {
  		'filter_items_list'     => __( 'Filter items list', 'DANDO' ),
  	);
  	$args = array(
- 		'label'                 => __( 'Slider', 'DANDO' ),
- 		'description'           => __( 'Hero Slider', 'DANDO' ),
+ 		'label'                 => __( 'CTA\'s', 'DANDO' ),
+ 		'description'           => __( 'Call to Action\'s', 'DANDO' ),
  		'labels'                => $labels,
  		'supports'              => array( 'title', 'editor', 'author', 'thumbnail', ),
- 		'taxonomies'            => array( 'slider_cat' ),
+ 		'taxonomies'            => array( 'testimonial_cat' ),
  		'hierarchical'          => false,
  		'public'                => true,
  		'show_ui'               => true,
  		'show_in_menu'          => true,
  		'menu_position'         => 20,
- 		'menu_icon'             => 'dashicons-slides',
+ 		'menu_icon'             => 'dashicons-megaphone',
  		'show_in_admin_bar'     => true,
  		'show_in_nav_menus'     => true,
  		'can_export'            => true,
@@ -59,17 +59,17 @@ function custom_post_type_SLIDERS() {
  		'publicly_queryable'    => true,
  		'capability_type'       => 'post',
  	);
- 	register_post_type( 'sliders', $args );
+ 	register_post_type( 'ctas', $args );
 
 }
-add_action( 'init', 'custom_post_type_SLIDERS', 0 );
+add_action( 'init', 'custom_post_type_CTAS', 0 );
 
 // Register Custom Taxonomy
-function custom_taxonomy_SLIDER_CAT() {
+function custom_taxonomy_CTA_CAT() {
 
 	$labels = array(
-		'name'                       => _x( 'Slider Categories', 'Slider Categories', 'DANDO' ),
-		'singular_name'              => _x( 'Slider Category', 'Slider Category', 'DANDO' ),
+		'name'                       => _x( 'CTA Categories', 'CTA Categories', 'DANDO' ),
+		'singular_name'              => _x( 'CTA Category', 'CTA Category', 'DANDO' ),
 		'menu_name'                  => __( 'Categories', 'DANDO' ),
 		'all_items'                  => __( 'All Items', 'DANDO' ),
 		'parent_item'                => __( 'Parent Item', 'DANDO' ),
@@ -98,7 +98,7 @@ function custom_taxonomy_SLIDER_CAT() {
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => false,
 	);
-	register_taxonomy( 'slider_cat', array( 'sliders' ), $args );
+	register_taxonomy( 'cta_cat', array( 'ctas' ), $args );
 
 }
-add_action( 'init', 'custom_taxonomy_SLIDER_CAT', 0 );
+add_action( 'init', 'custom_taxonomy_CTA_CAT', 0 );
