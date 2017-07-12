@@ -31,6 +31,8 @@ section.container {
 	list-style: none;
 	margin-left: 0;
 }
+.blocklist > li { display: block; }
+.inlinelist > li { display: inline; }
 
 // Default ACF maps
 .acf-map {

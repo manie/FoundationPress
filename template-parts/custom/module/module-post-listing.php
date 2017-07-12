@@ -26,6 +26,7 @@
 		if ( get_sub_field('dcf_post_listing_term_restriction') ) { $post_term_restriction[] = get_sub_field('dcf_post_listing_term_restriction'); }
 		if ( get_sub_field('dcf_post_listing_count') ) { $post_count = get_sub_field('dcf_post_listing_count'); } else { $post_count = get_option( 'posts_per_page' ); }
 		if ( get_sub_field('dcf_post_listing_items') ) { $listing_items = get_sub_field('dcf_post_listing_items'); }
+		$content_class = implode(" ", $post_type);
 
 	// WP_Query arguments
 		$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
@@ -99,6 +100,8 @@
 						$i++; // Increment count for active class
 						if ( get_post_type() == 'testimonials' ){
 							get_template_part( 'template-parts/custom/content/archive', 'testimonials');
+						} elseif ( get_post_type() == 'ctas' ){
+							get_template_part( 'template-parts/custom/content/archive', 'ctas');
 						} else {
 							get_template_part( 'template-parts/content', 'custom');
 						}

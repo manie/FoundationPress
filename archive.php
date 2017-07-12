@@ -28,8 +28,14 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/custom/content/archive', 'testimonials'); ?>
 
+			<?php } elseif ( is_post_type_archive('ctas') ){ ?>
+
+				<?php get_template_part( 'template-parts/custom/content/archive', 'ctas'); ?>
+
 			<?php } else { ?>
+
 				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+
 			<?php } ?>
 
 		<?php endwhile; ?>
@@ -52,6 +58,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</article>
+
 	<?php get_sidebar(); ?>
 
 </div>

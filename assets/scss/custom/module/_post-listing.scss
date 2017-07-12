@@ -104,6 +104,23 @@
 		}
 	}
 
+	.panel-content {
+		.ctas {
+			display: table;
+			min-height: 200px;
+			table-layout: fixed;
+			width: 100%;
+
+			.type-ctas {
+				display: table-cell;
+				text-align: center;
+				vertical-align: middle;
+
+				@include bg-cover;
+			}
+		}
+	}
+
 	@include breakpoint(small only){
 		@include small-posts-list;
 	}

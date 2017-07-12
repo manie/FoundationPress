@@ -19,7 +19,12 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/custom/content/single', 'testimonials'); ?>
 
+		<?php } elseif ( is_singular('ctas') ){ ?>
+
+			<?php get_template_part( 'template-parts/custom/content/single', 'ctas'); ?>
+
 		<?php } else { ?>
+
 			<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
 				<header>
 					<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -39,6 +44,7 @@ get_header(); ?>
 				<?php comments_template(); ?>
 				<?php do_action( 'foundationpress_post_after_comments' ); ?>
 			</article>
+
 		<?php } ?>
 
 	<?php endwhile;?>
